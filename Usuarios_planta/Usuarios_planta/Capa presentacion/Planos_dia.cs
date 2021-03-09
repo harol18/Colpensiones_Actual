@@ -74,12 +74,7 @@ namespace Usuarios_planta.Capa_presentacion
 
         private void btn_Validar_Click(object sender, EventArgs e)
         {
-            if (cmb_Gestion2.Text == "Pendiente Cargue")
-            {
-                cmds_dia.pendiente_cargue_dia(dtp_cargue, dgv_altas,Txtfuncionario);
-                cmds_dia.pendiente_cargue_dia_bajas(dtp_cargue, dgv_bajas,Txtfuncionario);
-                lbtotal.Text = dgv_altas.Rows.Count.ToString();
-            }
+            
         }
 
         private void Btn_actualizar_cargue_Click_1(object sender, EventArgs e)
@@ -178,6 +173,16 @@ namespace Usuarios_planta.Capa_presentacion
                 {
                     MessageBox.Show("Debe seleccionar que plano va a crear","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
+            }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            if (cmb_Gestion2.Text == "Pendiente Cargue")
+            {
+                cmds_dia.pendiente_cargue_dia(dtp_cargue, dgv_altas, Txtfuncionario);
+                cmds_dia.pendiente_cargue_dia_bajas(dtp_cargue, dgv_bajas, Txtfuncionario);
+                lbtotal.Text = dgv_altas.Rows.Count.ToString();
             }
         }
     }

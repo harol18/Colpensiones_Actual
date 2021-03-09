@@ -16,7 +16,9 @@ namespace Usuarios_planta.Capa_presentacion
 {
     public partial class Login : Form
     {
-        MySqlConnection con = new MySqlConnection("server=82.2.121.99;Uid=userapp;password=userapp;database=dblibranza;port=3306;persistsecurityinfo=True;");
+        MySqlConnection con = new MySqlConnection("server=;Uid=;password=;database=dblibranza;port=3306;persistsecurityinfo=True;");
+
+        Comandos cmds = new Comandos();
 
         public Login()
         {
@@ -42,6 +44,7 @@ namespace Usuarios_planta.Capa_presentacion
                     usuario.Identificacion = dt.Rows[0][0].ToString();
                     usuario.Nombre = dt.Rows[0][1].ToString();
                     usuario.CE= dt.Rows[0][2].ToString();
+                    cmds.Accesso_Aplicacion();
                     Form formulario = new VoBo();
                     formulario.Show();
                 }

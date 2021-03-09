@@ -63,14 +63,17 @@ namespace Usuarios_planta.Capa_presentacion
         }
 
         DateTime fecha = DateTime.Now;
+        DateTime fecha1 = DateTime.Now;
 
         private void Formdia_Load(object sender, EventArgs e)
-        {
-            lblfecha_actual.Text = fecha.ToString("dd/MM/yyyy");
+        {      
+            lblfecha_actual.Text = fecha.ToString("yyyy/MM/dd");
             dtpcargue.Text = "01/01/2020";
             dtpfecha_rpta.Text = "01/01/2020";
             lblrescate.Visible = false;
             lbafiliacion.Visible = false;
+            cmds_dia.Total_Fecha_Rta(lblfecha_actual, lblhoy);
+            cmds_dia.Total_Fecha_Rta_anterior(lblfecha_actual, lblFecha_anterior);
         }
 
         private void Txtafiliacion2_Validated(object sender, EventArgs e)
@@ -262,41 +265,7 @@ namespace Usuarios_planta.Capa_presentacion
                 cmds_dia.Insertar_colp(Txtradicado, Txtcedula, Txtnombre, TxtEstado_cliente, Txtafiliacion1, Txtafiliacion2, cmbtipo,
                                    Txtscoring, Txtconsecutivo, cmbfuerza, cmbdestino, Txtrtq, Txtmonto, Txtplazo, Txtcuota, Txttotal, Txtpagare, Txtnit,
                                    Txtcuota_letras, Txttotal_letras, cmbestado, cmbcargue, dtpcargue, cmbresultado,
-                                   cmbrechazo, dtpfecha_rpta, Txtplano_dia, Txtplano_pre, TxtN_Plano, Txtcomentarios, lblfecha_actual);
-
-                Txtradicado.Text = null;
-                Txtcedula.Text=null;
-                Txtradicado.Text = null;
-                Txtcedula.Text = null;
-                Txtnombre.Text = null;
-                TxtEstado_cliente.Text = null;
-                Txtafiliacion1.Text = null;
-                Txtafiliacion2.Text = null;
-                cmbtipo.Text = null;
-                Txtscoring.Text = null;
-                Txtconsecutivo.Text = null;
-                cmbfuerza.Text = null;
-                cmbdestino.Text = null;
-                Txtrtq.Text = null;
-                Txtmonto.Text = null;
-                Txtplazo.Text = null;
-                Txtcuota.Text = null;
-                Txttotal.Text = null;
-                Txtpagare.Text = null;
-                Txtnit.Text = null;
-                Txtcuota_letras.Text = null;
-                Txttotal_letras.Text = null;
-                cmbestado.Text = null;
-                cmbcargue.Text = null;
-                dtpcargue.Text = "01/01/2020";
-                cmbresultado.Text = null;
-                cmbrechazo.Text = null;
-                dtpfecha_rpta.Text = "01/01/2020";
-                Txtplano_dia.Text = null;
-                Txtplano_pre.Text = null;
-                TxtN_Plano.Text = null;
-                Txtcomentarios.Text = null;
-                cod_suspendido.Text = null;
+                                   cmbrechazo, dtpfecha_rpta, Txtplano_dia, Txtplano_pre, TxtN_Plano, Txtcomentarios, lblfecha_actual);                
             }
         }
 
@@ -311,21 +280,21 @@ namespace Usuarios_planta.Capa_presentacion
             }
             else if (cmbestado.Text == "Negada")
             {
-                Txtcomentarios.Text = "Crédito Negado por el convenio debido a: ";
+                Txtcomentarios.Text = "Crédito Negado por el convenio debido a: " + " "+ extrae;
             }
             else if (cmbestado.Text == "Devuelta")
             {
-                Txtcomentarios.Text = "Operacion devuelta por: ";
+                Txtcomentarios.Text = "Operacion devuelta por: " + " " + extrae;
             }
             else if (cmbestado.Text == "Suspendida" && cmbrestriccion.Text=="SI")
             {
                 cod_suspendido.Visible = true;
-                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Convenio se encuentra en periodo de restriccion desde dd/mm/yyyy hasta dd/mm/yyyy con posible fecha de respuesta el dd/mm/yyyy. Se radica en plataforma el dia " + fecha.ToString("dd/MM/yyyy") + " 907";
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Convenio se encuentra en periodo de restriccion desde dd/mm/yyyy hasta dd/mm/yyyy con posible fecha de respuesta el dd/mm/yyyy. Se radica en plataforma el dia " + dtpcargue.Text + " 907" + " " + extrae;
             }
             else if (cmbestado.Text == "Suspendida" && cmbrestriccion.Text == "NO")
             {
                 cod_suspendido.Visible = true;
-                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Operacion se radica en plataforma el " + fecha.ToString("dd/MM/yyyy") + " CON POSIBLE FECHA DE RESPUESTA EL " + dtpfecha_rpta;
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Operacion se radica en plataforma el " + dtpcargue.Text + " CON POSIBLE FECHA DE RESPUESTA EL " + dtpfecha_rpta.Text + " " + extrae;
             }
         }
 
@@ -398,16 +367,6 @@ namespace Usuarios_planta.Capa_presentacion
             dgv_datos_plano.DataSource = null;
             cmds.busqueda_plano(dgv_datos_plano, Txtbusqueda);
         }       
-
-        private void TeclaEnter(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-            if (e.KeyChar == (char)(Keys.Enter))
-            {
-                e.Handled = true;
-                SendKeys.Send("{TAB}");
-            }
-        }
 
         private void cod_suspendido_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -543,6 +502,270 @@ namespace Usuarios_planta.Capa_presentacion
         private void cmbtipo_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void cmbtipo_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            //this.Close();
+            //Form formulario = new Formdia();
+            //formulario.Show();
+
+            Txtradicado.Text = null;
+            Txtcedula.Text = null;
+            Txtradicado.Text = null;
+            Txtcedula.Text = null;
+            Txtnombre.Text = null;
+            TxtEstado_cliente.Text = null;
+            Txtafiliacion1.Text = null;
+            Txtafiliacion2.Text = null;
+            cmbtipo.Text = null;
+            Txtscoring.Text = null;
+            Txtconsecutivo.Text = null;
+            cmbfuerza.Text = null;
+            cmbdestino.Text = null;
+            Txtrtq.Text = null;
+            Txtmonto.Text = null;
+            Txtplazo.Text = null;
+            Txtcuota.Text = null;
+            Txttotal.Text = null;
+            Txtpagare.Text = null;
+            Txtnit.Text = null;
+            Txtcuota_letras.Text = null;
+            Txttotal_letras.Text = null;
+            cmbestado.Text = null;
+            cmbcargue.Text = null;
+            dtpcargue.Text = "01/01/2020";
+            cmbresultado.Text = null;
+            cmbrechazo.Text = null;
+            dtpfecha_rpta.Text = "01/01/2020";
+            Txtplano_dia.Text = null;
+            Txtplano_pre.Text = null;
+            TxtN_Plano.Text = null;
+            Txtcomentarios.Text = null;
+            cod_suspendido.Text = null;
+            cmds_dia.Total_Fecha_Rta(lblfecha_actual, lblhoy);
+            cmds_dia.Total_Fecha_Rta_anterior(lblfecha_actual, lblFecha_anterior);
+        }
+
+        private void dtpcargue_ValueChanged(object sender, EventArgs e)
+        {
+            string extrae;
+            extrae = usuario.Identificacion.Substring(usuario.Identificacion.Length - 3); // extrae los ultimos 5 digitos del textbox 
+
+            if (cmbestado.Text == "Aprobada")
+            {
+                Txtcomentarios.Text = "Crédito Aprobado Scoring: " + Txtscoring.Text + " Monto: " + Txtmonto.Text + " Plazo: " + Txtplazo.Text + " Meses" + " Destino: " + cmbdestino.Text + " " + extrae;
+            }
+            else if (cmbestado.Text == "Negada")
+            {
+                Txtcomentarios.Text = "Crédito Negado por el convenio debido a: " + " " + extrae;
+            }
+            else if (cmbestado.Text == "Devuelta")
+            {
+                Txtcomentarios.Text = "Operacion devuelta por: ";
+            }
+            else if (cmbestado.Text == "Suspendida" && cmbrestriccion.Text == "SI")
+            {
+                cod_suspendido.Visible = true;
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Convenio se encuentra en periodo de restriccion desde dd/mm/yyyy hasta dd/mm/yyyy con posible fecha de respuesta el dd/mm/yyyy. Se radica en plataforma el dia " + dtpcargue.Text + " 907 " + extrae;
+            }
+            else if (cmbestado.Text == "Suspendida" && cmbrestriccion.Text == "NO")
+            {
+                cod_suspendido.Visible = true; 
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Operacion se radica en plataforma el " + dtpcargue.Text + " CON POSIBLE FECHA DE RESPUESTA EL " + dtpfecha_rpta.Text + " 908" +
+                    " " + extrae;
+            }
+            else if (cmbestado.Text == "Suspendida" && cmbrestriccion.Text == "")
+            {
+                cod_suspendido.Visible = true;
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Operacion se radica en plataforma el " + dtpcargue.Text + " CON POSIBLE FECHA DE RESPUESTA EL " + dtpfecha_rpta.Text + " 908" + " " + extrae;
+            }
+        }
+
+        private void dtpfecha_rpta_ValueChanged(object sender, EventArgs e)
+        {
+            string extrae;
+            extrae = usuario.Identificacion.Substring(usuario.Identificacion.Length - 3); // extrae los ultimos 5 digitos del textbox 
+
+            if (cmbestado.Text == "Aprobada")
+            {
+                Txtcomentarios.Text = "Crédito Aprobado Scoring: " + Txtscoring.Text + " Monto: " + Txtmonto.Text + " Plazo: " + Txtplazo.Text + " Meses" + " Destino: " + cmbdestino.Text + " " + extrae;
+            }
+            else if (cmbestado.Text == "Negada")
+            {
+                Txtcomentarios.Text = "Crédito Negado por el convenio debido a: " + " " + extrae;
+            }
+            else if (cmbestado.Text == "Devuelta")
+            {
+                Txtcomentarios.Text = "Operacion devuelta por: " + " " + extrae;
+            }
+            else if (cmbestado.Text == "Suspendida" && cmbrestriccion.Text == "SI")
+            {
+                cod_suspendido.Visible = true;
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Convenio se encuentra en periodo de restriccion desde dd/mm/yyyy hasta dd/mm/yyyy con posible fecha de respuesta el dd/mm/yyyy. Se radica en plataforma el dia " + dtpcargue.Text + " 907" + " " + extrae;
+            }
+            else if (cmbestado.Text == "Suspendida" && cmbrestriccion.Text == "NO")
+            {
+                cod_suspendido.Visible = true;
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Operacion se radica en plataforma el " + dtpcargue.Text + " CON POSIBLE FECHA DE RESPUESTA EL " + dtpfecha_rpta.Text + " " + extrae;
+            }
+            else if (cmbestado.Text == "Suspendida" && cmbrestriccion.Text == "")
+            {
+                cod_suspendido.Visible = true;
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Operacion se radica en plataforma el " + dtpcargue.Text + " CON POSIBLE FECHA DE RESPUESTA EL " + dtpfecha_rpta.Text + " " + extrae;
+            }
+        }
+
+        private void cmbcargue_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string extrae;
+            extrae = usuario.Identificacion.Substring(usuario.Identificacion.Length - 3); // extrae los ultimos 5 digitos del textbox 
+
+            if (cmbestado.Text == "Aprobada")
+            {
+                Txtcomentarios.Text = "Crédito Aprobado Scoring: " + Txtscoring.Text + " Monto: " + Txtmonto.Text + " Plazo: " + Txtplazo.Text + " Meses" + " Destino: " + cmbdestino.Text + " " + extrae;
+            }
+            else if (cmbestado.Text == "Negada")
+            {
+                Txtcomentarios.Text = "Crédito Negado por el convenio debido a: " + " " + extrae;
+            }
+            else if (cmbestado.Text == "Devuelta")
+            {
+                Txtcomentarios.Text = "Operacion devuelta por: " + " " + extrae;
+            }
+            else if (cmbestado.Text == "Suspendida" && cmbrestriccion.Text == "")
+            {           
+                cod_suspendido.Visible = true;
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Operacion se radica en plataforma el " + dtpcargue.Text + " CON POSIBLE FECHA DE RESPUESTA EL " + dtpfecha_rpta.Text + " 908" +
+                    " " + extrae;
+            }
+            else if (cmbestado.Text == "Suspendida" && cmbrestriccion.Text == "SI")
+            {
+                cod_suspendido.Visible = true;
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Convenio se encuentra en periodo de restriccion desde dd/mm/yyyy hasta dd/mm/yyyy con posible fecha de respuesta el dd/mm/yyyy. Se radica en plataforma el dia " + dtpcargue.Text + " 907" + " " + extrae;
+            }
+            else if (cmbestado.Text == "Suspendida" && cmbrestriccion.Text == "NO")
+            {
+                cod_suspendido.Visible = true;
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Operacion se radica en plataforma el " + dtpcargue.Text + " CON POSIBLE FECHA DE RESPUESTA EL " + dtpfecha_rpta.Text + " 908" +
+                    " " + extrae;
+            }
+        }
+
+        private void dtpfecha_rpta_ValueChanged_1(object sender, EventArgs e)
+        {
+            string extrae;
+            extrae = usuario.Identificacion.Substring(usuario.Identificacion.Length - 3); // extrae los ultimos 5 digitos del textbox 
+
+            if (cmbestado.Text == "Aprobada")
+            {
+                Txtcomentarios.Text = "Crédito Aprobado Scoring: " + Txtscoring.Text + " Monto: " + Txtmonto.Text + " Plazo: " + Txtplazo.Text + " Meses" + " Destino: " + cmbdestino.Text + " " + extrae;
+            }
+            else if (cmbestado.Text == "Negada")
+            {
+                Txtcomentarios.Text = "Crédito Negado por el convenio debido a: " + " " + extrae;
+            }
+            else if (cmbestado.Text == "Devuelta")
+            {
+                Txtcomentarios.Text = "Operacion devuelta por: " + " " + extrae;
+            }
+            else if (cmbestado.Text == "Suspendida" && cmbrestriccion.Text == "")
+            {
+                cod_suspendido.Visible = true;
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Operacion se radica en plataforma el " + dtpcargue.Text + " CON POSIBLE FECHA DE RESPUESTA EL " + dtpfecha_rpta.Text + " 908" + " " + extrae;
+            }
+            else if (cmbestado.Text == "Suspendida" && cmbrestriccion.Text == "SI")
+            {
+                cod_suspendido.Visible = true;
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Convenio se encuentra en periodo de restriccion desde dd/mm/yyyy hasta dd/mm/yyyy con posible fecha de respuesta el dd/mm/yyyy. Se radica en plataforma el dia " + dtpcargue.Text + " 907" + " " + extrae;
+            }
+            else if (cmbestado.Text == "Suspendida" && cmbrestriccion.Text == "NO")
+            {
+                cod_suspendido.Visible = true;
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Operacion se radica en plataforma el " + dtpcargue.Text + " CON POSIBLE FECHA DE RESPUESTA EL " + dtpfecha_rpta.Text + " 908" + " " + extrae;
+            }
+        }
+
+        private void Txtcedula_TextChanged_1(object sender, EventArgs e)
+        {
+            string largo = Txtcedula.Text;
+            string length = Convert.ToString(largo.Length);
+
+            if (length == "6")
+            {
+                Txtplano_dia.Text = "DIA000000" + Txtcedula.Text;
+                Txtplano_pre.Text = "PRE000000" + Txtcedula.Text;
+            }
+            else if (length == "7")
+            {
+                Txtplano_dia.Text = "DIA00000" + Txtcedula.Text;
+                Txtplano_pre.Text = "PRE00000" + Txtcedula.Text;
+            }
+            else if (length == "8")
+            {
+                Txtplano_dia.Text = "DIA0000" + Txtcedula.Text;
+                Txtplano_pre.Text = "PRE0000" + Txtcedula.Text;
+            }
+            else if (length == "9")
+            {
+                Txtplano_dia.Text = "DIA000" + Txtcedula.Text;
+                Txtplano_pre.Text = "PRE000" + Txtcedula.Text;
+            }
+            else if (length == "10")
+            {
+                Txtplano_dia.Text = "DIA00" + Txtcedula.Text;
+                Txtplano_pre.Text = "PRE00" + Txtcedula.Text;
+            }
+        }
+
+        private void Txtcedula_Validated_1(object sender, EventArgs e)
+        {
+            cmds.buscar_fallecido(Txtcedula, TxtEstado_cliente);
+        }
+
+        private void cmbdestino_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbfuerza_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            cmds_dia.Datos_fecha_hoy(dgvPendientes_rta, lblfecha_actual);
+        }
+
+        private void dgvPendientes_rta_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Txtbusqueda.Text = dgvPendientes_rta.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void dgv_datos_plano_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Txtradicado.Text = dgv_datos_plano.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void BtnAnterior_Click(object sender, EventArgs e)
+        {
+            cmds_dia.Datos_fecha_anterior(dgvPendientes_rta, lblfecha_actual);
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            cmds_dia.Datos_fecha_anterior(dgvPendientes_rta, lblfecha_actual);
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            cmds_dia.Datos_fecha_hoy(dgvPendientes_rta, lblfecha_actual);
         }
     }
 }

@@ -70,7 +70,7 @@
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(143, 714);
+            this.panelSideMenu.Size = new System.Drawing.Size(143, 749);
             this.panelSideMenu.TabIndex = 0;
             // 
             // panel_planos
@@ -290,7 +290,7 @@
             this.BtnSalir.IconColor = System.Drawing.Color.Gainsboro;
             this.BtnSalir.IconSize = 29;
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.Location = new System.Drawing.Point(0, 674);
+            this.BtnSalir.Location = new System.Drawing.Point(0, 709);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Padding = new System.Windows.Forms.Padding(1, 0, 20, 0);
             this.BtnSalir.Rotation = 0D;
@@ -419,7 +419,7 @@
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(143, 0);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(1162, 45);
+            this.panelTitulo.Size = new System.Drawing.Size(1227, 45);
             this.panelTitulo.TabIndex = 1;
             this.panelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseDown);
             this.panelTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseMove);
@@ -433,21 +433,22 @@
             this.panelContenedor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panelContenedor.Location = new System.Drawing.Point(143, 45);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1162, 669);
+            this.panelContenedor.Size = new System.Drawing.Size(1227, 704);
             this.panelContenedor.TabIndex = 2;
             // 
             // VoBo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1305, 714);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.panelSideMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "VoBo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vobo Pagador";
+            this.Text = "Vobo Pagador";            
             this.panelSideMenu.ResumeLayout(false);
             this.panel_planos.ResumeLayout(false);
             this.panelinformes.ResumeLayout(false);

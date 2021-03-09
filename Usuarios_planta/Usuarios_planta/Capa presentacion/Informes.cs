@@ -34,8 +34,8 @@ namespace Usuarios_planta.Formularios
         private void Btn_Crear_plano_Click(object sender, EventArgs e)
         {
             //Esta línea de código crea un archivo de texto para la exportación de datos.
-            //StreamWriter file = new StreamWriter(@"C:\\Users\\BBVA\\Desktop\\Colpensiones\\" + "archivo_jueves.txt");
-            StreamWriter file = new StreamWriter(@"D:\\Colpensiones\\" + "archivockl_jueves.txt");
+            StreamWriter file = new StreamWriter(@"C:\\Users\\BBVA\\Desktop\\Colpensiones\\" + "archivo_jueves.txt");
+            //StreamWriter file = new StreamWriter(@"D:\\Colpensiones\\" + "archivockl_jueves.txt");
             try
             {
                 string sLine = "";
@@ -69,6 +69,11 @@ namespace Usuarios_planta.Formularios
                 MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 file.Close();
             }
+        }
+
+        private void Informes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

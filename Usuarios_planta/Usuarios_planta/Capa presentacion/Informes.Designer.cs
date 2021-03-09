@@ -78,7 +78,7 @@
             // dtpinicio
             // 
             this.dtpinicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpinicio.CustomFormat = "dd/MM/yyyy";
+            this.dtpinicio.CustomFormat = "yyyy-MM-dd";
             this.dtpinicio.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpinicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpinicio.Location = new System.Drawing.Point(16, 196);
@@ -99,7 +99,7 @@
             // dtpfinal
             // 
             this.dtpfinal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpfinal.CustomFormat = "dd/MM/yyyy";
+            this.dtpfinal.CustomFormat = "yyyy-MM-dd";
             this.dtpfinal.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpfinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpfinal.Location = new System.Drawing.Point(155, 196);
@@ -259,7 +259,8 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Informes";
-            this.Text = "Informes";            
+            this.Text = "Informes";
+            this.Load += new System.EventHandler(this.Informes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_informes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_busqueda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();

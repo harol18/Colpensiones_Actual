@@ -17,7 +17,7 @@ namespace Usuarios_planta.Capa_presentacion
 {
     public partial class Cargue_archivos : Form
     {
-        MySqlConnection con = new MySqlConnection("server=82.2.121.99;Uid=userapp;password=userapp;database=dblibranza;port=3306;persistsecurityinfo=True;");
+        MySqlConnection con = new MySqlConnection("server=;Uid=;password=;database=dblibranza;port=3306;persistsecurityinfo=True;");
 
         public Cargue_archivos()
         {
@@ -34,8 +34,9 @@ namespace Usuarios_planta.Capa_presentacion
 
                 try
                 {
-                    using (StreamReader reader = new StreamReader(d.FileName))
-                    {   
+                using (StreamReader reader = new StreamReader(d.FileName))
+                //using (StreamReader reader = new StreamReader(@"C:\\Users\\BBVA\\Desktop\\Colpensiones\\fallecidos2.txt"))
+                    {
                         string line;  //Variable para almacenarm
                         while ((line = reader.ReadLine()) != null)
                         {   //Mientras haya mas archivo, leemos mas
@@ -47,16 +48,13 @@ namespace Usuarios_planta.Capa_presentacion
                             cmd.CommandText += "(\"" + fields[0] + "\",\"" + fields[2] + "\",\"" + fields[3] + "\",\"" + fields[4] + "\",\"" + fields[8] + "\",\"" + fields[9] + "\"," +
                                                 "\"" + fields[10] + "\", \"" + "Fallecido" + "\")";
                             cmd.ExecuteNonQuery();
-                            con.Close();
-                            
-                        }
-                        
-                        reader.Close();                        
-                    }
-                    
-                }
+                            con.Close();                            
+                        }                            
+                            reader.Close();                            
+                    }                    
+                }                
                 catch (Exception ex)
-                {
+                {                   
                     Console.WriteLine(ex);
                     con.Close();
                 }
@@ -94,7 +92,7 @@ namespace Usuarios_planta.Capa_presentacion
                     cmd.Parameters.AddWithValue("@Scoring", range.Cells[i, 10].Value2.ToString());
                     cmd.Parameters.AddWithValue("@Nombre", range.Cells[i, 11].Value2.ToString());
                     cmd.Parameters.AddWithValue("@Cedula_cliente", range.Cells[i, 12].Value2.ToString());
-                    cmd.Parameters.AddWithValue("@Fecha_desembolso", Convert.ToDateTime(range.Cells[i, 13].Value2).ToString("dd/MM/yyyy"));
+                    cmd.Parameters.AddWithValue("@Fecha_desembolso", Convert.ToDateTime(range.Cells[i, 13].Value2).ToString("yyyy-MM-dd"));
                     cmd.Parameters.AddWithValue("@Importe", range.Cells[i, 14].Value2.ToString());
                     cmd.Parameters.AddWithValue("@Plazo", range.Cells[i, 15].Value2.ToString());
                     cmd.Parameters.AddWithValue("@TasaE_A", range.Cells[i, 16].Value2.ToString());

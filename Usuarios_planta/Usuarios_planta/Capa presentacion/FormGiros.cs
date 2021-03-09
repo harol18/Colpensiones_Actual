@@ -52,8 +52,7 @@ namespace Usuarios_planta.Formularios
                 currentBtn = (Button)senderBtn;
                 currentBtn.BackColor = Color.FromArgb(37, 36, 81);
                 currentBtn.ForeColor = Color.FromArgb(215,219,222);
-                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
-                
+                currentBtn.TextAlign = ContentAlignment.MiddleCenter;                
             }
         }
 
@@ -70,7 +69,7 @@ namespace Usuarios_planta.Formularios
 
         private void FormGiros_Load(object sender, EventArgs e)
         {
-            lblfecha_actual.Text = fecha.ToString("dd/MM/yyyy");
+            lblfecha_actual.Text = fecha.ToString("yyyy-MM-dd");
             lbafiliacion.Visible = false;
             dtpcargue.Text = "01/01/2020";
             dtpfecha_desembolso.Text = "01/01/2020";
@@ -250,10 +249,10 @@ namespace Usuarios_planta.Formularios
         private void Txtcedula_Validated(object sender, EventArgs e)
         {
             cmds.buscar_fallecido(Txtcedula,TxtEstado_cliente);
-        }
+        }       
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
-        {
+        {            
             BorrarMensajeError();
             if (validar())
             {
@@ -305,17 +304,20 @@ namespace Usuarios_planta.Formularios
 
         private void cmbestado_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string extrae;
+            extrae = usuario.Identificacion.Substring(usuario.Identificacion.Length - 3); // extrae los ultimos 5 digitos del textbox 
+
             if (cmbestado.Text=="Avanza")
             {
-                Txtcomentarios.Text = "Operacion ISS CPK Libranza desembolso sin VoBo "  +fecha.ToString("dd/MM/yyyy");
+                Txtcomentarios.Text = "Operacion ISS CPK Libranza desembolso sin VoBo "  +fecha.ToString("dd/MM/yyyy") + " " + extrae;
             }
             else if(cmbestado.Text == "Devuelta")
             {
-                Txtcomentarios.Text = "Operacion devuelta por: ";
+                Txtcomentarios.Text = "Operacion devuelta por: " + " " + extrae;
             }
             else if (cmbestado.Text == "Suspendida")
             {
-                Txtcomentarios.Text = "Operacion suspendida por: ";
+                Txtcomentarios.Text = "Operacion suspendida por: " + " " + extrae;
             }
         }
 

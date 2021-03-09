@@ -14,8 +14,32 @@ using Usuarios_planta.Formularios;
 namespace Usuarios_planta
 {
     class Comandos
-    {
+    {        
         MySqlConnection con = new MySqlConnection("server=;Uid=;password=;database=dblibranza;port=3306;persistsecurityinfo=True;");
+
+        public void Accesso_Aplicacion()
+        {
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand("Acceso_colp", con);
+            MySqlTransaction myTrans; // Iniciar una transacción local 
+            myTrans = con.BeginTransaction(); // Debe asignar tanto el objeto de transacción como la conexión // al objeto de Comando para una transacción local pendiente
+            try
+            {                
+                cmd.CommandType = CommandType.StoredProcedure;               
+                cmd.Parameters.AddWithValue("@_Usuario", usuario.Nombre);                
+                cmd.ExecuteNonQuery();
+                myTrans.Commit();                
+            }
+            catch (Exception ex)
+            {
+                myTrans.Rollback();
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
 
         public void Insertar_colp(TextBox Txtradicado, TextBox Txtcedula, TextBox Txtnombre, TextBox TxtEstado_cliente, TextBox Txtafiliacion1, TextBox Txtafiliacion2,
                                   ComboBox cmbtipo, TextBox Txtscoring, TextBox Txtconsecutivo, ComboBox cmbfuerza, ComboBox cmbdestino, TextBox Txtmonto, TextBox Txtplazo, TextBox Txtcuota, TextBox Txttotal,
@@ -29,7 +53,12 @@ namespace Usuarios_planta
             myTrans = con.BeginTransaction(); // Debe asignar tanto el objeto de transacción como la conexión // al objeto de Comando para una transacción local pendiente
             try
             {
-
+                dtpcargue.Format = DateTimePickerFormat.Custom;
+                dtpfecha_desembolso.Format = DateTimePickerFormat.Custom;
+                dtpfecha_rpta.Format = DateTimePickerFormat.Custom;
+                dtpfecha_desembolso.CustomFormat = "yyyy-MM-dd";
+                dtpcargue.CustomFormat = "yyyy-MM-dd";
+                dtpfecha_rpta.CustomFormat = "yyyy-MM-dd";
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@_Radicado", Txtradicado.Text);
                 cmd.Parameters.AddWithValue("@_Cedula", Txtcedula.Text);
@@ -67,6 +96,9 @@ namespace Usuarios_planta
                 cmd.ExecuteNonQuery();
                 myTrans.Commit();
                 MessageBox.Show("Información Almacenada con Éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                dtpcargue.CustomFormat = "dd/MM/yyyy";
+                dtpfecha_rpta.CustomFormat = "dd/MM/yyyy";
+                dtpfecha_desembolso.CustomFormat = "dd/MM/yyyy";
             }
             catch (Exception ex)
             {

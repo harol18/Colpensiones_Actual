@@ -16,7 +16,6 @@ namespace Usuarios_planta
     {
         MySqlConnection con = new MySqlConnection("server=;Uid=;password=;database=dblibranza;port=3306;persistsecurityinfo=True;");
 
-
         public void Insertar_colp(TextBox Txtradicado, TextBox Txtcedula, TextBox Txtnombre, TextBox TxtEstado_cliente, TextBox Txtafiliacion1, TextBox Txtafiliacion2,
                                   ComboBox cmbtipo, TextBox Txtscoring, TextBox Txtconsecutivo, ComboBox cmbfuerza, ComboBox cmbdestino, TextBox Txtrtq, TextBox Txtmonto, 
                                   TextBox Txtplazo, TextBox Txtcuota, TextBox Txttotal,TextBox Txtpagare, TextBox Txtnit, TextBox Txtcuota_letras, TextBox Txttotal_letras,
@@ -30,6 +29,10 @@ namespace Usuarios_planta
 
             try
             {
+                dtpcargue.Format = DateTimePickerFormat.Custom;
+                dtpfecha_rpta.Format = DateTimePickerFormat.Custom;
+                dtpcargue.CustomFormat = "yyyy-MM-dd";
+                dtpfecha_rpta.CustomFormat = "yyyy-MM-dd";
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@_Radicado", Txtradicado.Text);
                 cmd.Parameters.AddWithValue("@_Cedula", Txtcedula.Text);
@@ -67,6 +70,8 @@ namespace Usuarios_planta
                 cmd.ExecuteNonQuery();
                 myTrans.Commit();
                 MessageBox.Show("Información Almacenada con Éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                dtpcargue.CustomFormat = "dd/MM/yyyy";
+                dtpfecha_rpta.CustomFormat = "dd/MM/yyyy";
             }
             catch (Exception e)
             {
@@ -323,6 +328,7 @@ namespace Usuarios_planta
         }
 
         DateTime fecha = DateTime.Now;
+        DateTime fecha1 = DateTime.Now;
 
         public void actualizar_cargueckl(DataGridView dgv_altas, TextBox Txtplano_alta)
         {
@@ -336,7 +342,7 @@ namespace Usuarios_planta
                     cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@_N_Afiliacion2", Convert.ToString(row.Cells[0].Value));
                     cmd.Parameters.AddWithValue("@_Estado_cargue", "Ok Cargue");
-                    cmd.Parameters.AddWithValue("@_Fecha_Cargue", fecha.ToString("dd/MM/yyyy"));
+                    cmd.Parameters.AddWithValue("@_Fecha_Cargue", fecha.ToString("yyyy-MM-dd"));
                     cmd.Parameters.AddWithValue("@_Respuesta_Cargue", "Pdte Dictamen");
                     cmd.Parameters.AddWithValue("@_Plano", Txtplano_alta.Text);
                     cmd.ExecuteNonQuery();
@@ -428,17 +434,14 @@ namespace Usuarios_planta
             }
         }
 
-
-        public void Informe_dia(DataGridView dgv_informes, DateTimePicker dtpinicio, DateTimePicker dtpfinal , ComboBox cmbinformes)
+        public void Informe_dia(DataGridView dgv_informes, ComboBox cmbinformes)
         {
             try
             {
                 con.Open();
                 DataTable dt = new DataTable();
                 MySqlCommand cmd = new MySqlCommand("informe_dia", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@_fecha_inicio", dtpinicio.Text);
-                cmd.Parameters.AddWithValue("@_fecha_final", dtpfinal.Text);
+                cmd.CommandType = CommandType.StoredProcedure;                
                 cmd.Parameters.AddWithValue("@_Estado_Operacion", cmbinformes.Text);
                 cmd.Parameters.AddWithValue("@_Id_Funcionario", usuario.Identificacion);
                 MySqlDataAdapter registro = new MySqlDataAdapter(cmd);
@@ -453,5 +456,134 @@ namespace Usuarios_planta
                 MessageBox.Show("Conexion cerrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public void Informe_dia2(DataGridView dgv_informes, ComboBox cmbEstado_Cargue, ComboBox cmbinformes)
+        {
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                MySqlCommand cmd = new MySqlCommand("informe_dia2", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@_Estado_Operacion", cmbinformes.Text);
+                cmd.Parameters.AddWithValue("@_Estado_cargue", cmbEstado_Cargue.Text);
+                cmd.Parameters.AddWithValue("@_Id_Funcionario", usuario.Identificacion);
+                MySqlDataAdapter registro = new MySqlDataAdapter(cmd);
+                registro.Fill(dt);
+                dgv_informes.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("", ex.ToString());
+                con.Close();
+                MessageBox.Show("Conexion cerrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void Total_Fecha_Rta(Label lblfecha_actual, Label lblhoy)
+        {
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand("Total_Fecha_Rta", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@_Fecha_respuesta", lblfecha_actual.Text);
+                cmd.Parameters.AddWithValue("@_Id_Funcionario", usuario.Identificacion);
+                MySqlDataReader registro;
+                registro = cmd.ExecuteReader();
+                if (registro.Read())
+                {
+                    lblhoy.Text = registro[0].ToString();
+                    con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("No hay datos para enviar el dia de hoy", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Consecutivo no existe", ex.ToString());
+                con.Close();
+                MessageBox.Show("Conexion cerrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void Datos_fecha_anterior(DataGridView dgvPendientes_rta, Label lblfecha_actual)
+        {
+
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                MySqlCommand cmd = new MySqlCommand("Pte_Rta_anterior", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@_Fecha_respuesta", lblfecha_actual.Text);
+                cmd.Parameters.AddWithValue("@_Id_Funcionario", usuario.Identificacion);
+                MySqlDataAdapter registro = new MySqlDataAdapter(cmd);
+                registro.Fill(dt);
+                dgvPendientes_rta.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("", ex.ToString());
+                con.Close();
+                MessageBox.Show("Conexion cerrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void Datos_fecha_hoy(DataGridView dgvPendientes_rta, Label lblfecha_actual)
+        {
+
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                MySqlCommand cmd = new MySqlCommand("Pte_Rta_Hoy", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@_Fecha_respuesta", lblfecha_actual.Text);
+                cmd.Parameters.AddWithValue("@_Id_Funcionario", usuario.Identificacion);
+                MySqlDataAdapter registro = new MySqlDataAdapter(cmd);
+                registro.Fill(dt);
+                dgvPendientes_rta.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("", ex.ToString());
+                con.Close();
+                MessageBox.Show("Conexion cerrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void Total_Fecha_Rta_anterior(Label lblfecha_actual, Label lblFecha_anterior)
+        {
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand("Total_Fecha_Rta_anterior", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@_Fecha_respuesta", lblfecha_actual.Text);
+                cmd.Parameters.AddWithValue("@_Id_Funcionario", usuario.Identificacion);
+                MySqlDataReader registro;
+                registro = cmd.ExecuteReader();
+                if (registro.Read())
+                {
+                    lblFecha_anterior.Text = registro[0].ToString();
+                    con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("No hay datos para enviar el dia de hoy", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Consecutivo no existe", ex.ToString());
+                con.Close();
+                MessageBox.Show("Conexion cerrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }
