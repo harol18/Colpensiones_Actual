@@ -624,3 +624,56 @@ C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5\Usuario
 C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.csproj.CopyComplete
 C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.exe
 C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.pdb
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.Capa_presentacion.FrmCodigos_Suspension.resources
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.Capa_presentacion.FrmAdministrador.resources
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\Usuarios_planta.exe.config
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\Usuarios_planta.exe
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\Usuarios_planta.pdb
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\ClosedXML.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\ExcelNumberFormat.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\FontAwesome.Sharp.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\MySql.Data.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\SpreadsheetLight.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\System.IO.Packaging.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\Google.Protobuf.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\Zstandard.Net.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\K4os.Compression.LZ4.Streams.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\BouncyCastle.Crypto.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\Ubiety.Dns.Core.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\Renci.SshNet.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\System.Buffers.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\K4os.Compression.LZ4.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\K4os.Hash.xxHash.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\System.Memory.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\System.Numerics.Vectors.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\ClosedXML.pdb
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\ClosedXML.xml
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\DocumentFormat.OpenXml.xml
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\ExcelNumberFormat.xml
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\MySql.Data.xml
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\SpreadsheetLight.xml
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\bin\Release\System.IO.Packaging.xml
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.csprojAssemblyReference.cache
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Interop.OutlookSocialProvider.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Interop.SharePointProvider.dll
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.csproj.ResolveComReference.cache
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.Capa_presentacion.Cargue_archivos.resources
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.Capa_presentacion.Formdia.resources
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.Capa_presentacion.FrmAdministrador.resources
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.Capa_presentacion.FrmCodigos_Suspension.resources
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.Capa_presentacion.Informes_dia.resources
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.Capa_presentacion.Planos.resources
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.Capa_presentacion.Planos_dia.resources
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.VoBo.resources
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.Formularios.FormGiros.resources
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.Formularios.Informes.resources
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.Capa_presentacion.Login.resources
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.Properties.Resources.resources
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.csproj.GenerateResource.cache
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.csproj.CoreCompileInputs.cache
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.csproj.CopyComplete
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.exe
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.pdb
+C:\Users\BBVA\Desktop\Desarrollo c# fabrica\Colpensiones\Colpensiones v5 prueba encryptacion\Usuarios_planta\Usuarios_planta\obj\Release\Usuarios_planta.Cambiar_Contraseña.resources

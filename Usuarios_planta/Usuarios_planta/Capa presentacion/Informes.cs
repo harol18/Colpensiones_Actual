@@ -16,7 +16,7 @@ namespace Usuarios_planta.Formularios
     public partial class Informes : Form
     {
 
-        MySqlConnection con = new MySqlConnection("server=82.2.121.99;Uid=userapp;password=userapp;database=dblibranza;port=3306;persistsecurityinfo=True;");
+        MySqlConnection con = new MySqlConnection("server=;Uid=;password=;database=dblibranza;port=3306;persistsecurityinfo=True;");
 
         Comandos cmds = new Comandos();
         
@@ -34,8 +34,8 @@ namespace Usuarios_planta.Formularios
         private void Btn_Crear_plano_Click(object sender, EventArgs e)
         {
             //Esta línea de código crea un archivo de texto para la exportación de datos.
-            StreamWriter file = new StreamWriter(@"C:\\Users\\BBVA\\Desktop\\Colpensiones\\" + "archivo_jueves.txt");
-            //StreamWriter file = new StreamWriter(@"D:\\Colpensiones\\" + "archivockl_jueves.txt");
+            //StreamWriter file = new StreamWriter(@"C:\\Users\\BBVA\\Desktop\\Colpensiones\\" + "archivo_jueves.txt");
+            StreamWriter file = new StreamWriter(@"D:\\Colpensiones\\" + "archivockl_jueves.txt");
             try
             {
                 string sLine = "";
@@ -69,11 +69,6 @@ namespace Usuarios_planta.Formularios
                 MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 file.Close();
             }
-        }
-
-        private void Informes_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

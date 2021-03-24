@@ -148,8 +148,9 @@
             // 
             // Txtfuncionario
             // 
-            this.Txtfuncionario.BackColor = System.Drawing.Color.Snow;
+            this.Txtfuncionario.BackColor = System.Drawing.Color.White;
             this.Txtfuncionario.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txtfuncionario.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Txtfuncionario.Location = new System.Drawing.Point(7, 132);
             this.Txtfuncionario.MaxLength = 20;
             this.Txtfuncionario.Multiline = true;
@@ -170,7 +171,7 @@
             // 
             // Txtplano_baja
             // 
-            this.Txtplano_baja.BackColor = System.Drawing.Color.Snow;
+            this.Txtplano_baja.BackColor = System.Drawing.Color.White;
             this.Txtplano_baja.Enabled = false;
             this.Txtplano_baja.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txtplano_baja.Location = new System.Drawing.Point(7, 435);
@@ -193,7 +194,7 @@
             // 
             // Txtplano_alta
             // 
-            this.Txtplano_alta.BackColor = System.Drawing.Color.Snow;
+            this.Txtplano_alta.BackColor = System.Drawing.Color.White;
             this.Txtplano_alta.Enabled = false;
             this.Txtplano_alta.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txtplano_alta.Location = new System.Drawing.Point(7, 349);
@@ -227,7 +228,7 @@
             // 
             // TxtCod_plano
             // 
-            this.TxtCod_plano.BackColor = System.Drawing.Color.Snow;
+            this.TxtCod_plano.BackColor = System.Drawing.Color.White;
             this.TxtCod_plano.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCod_plano.Location = new System.Drawing.Point(7, 276);
             this.TxtCod_plano.MaxLength = 2;
@@ -251,7 +252,7 @@
             // 
             // cmb_Gestion2
             // 
-            this.cmb_Gestion2.BackColor = System.Drawing.Color.Snow;
+            this.cmb_Gestion2.BackColor = System.Drawing.Color.White;
             this.cmb_Gestion2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmb_Gestion2.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Gestion2.FormattingEnabled = true;
@@ -306,10 +307,10 @@
             this.Btn_actualizar_cargue.IconChar = FontAwesome.Sharp.IconChar.Database;
             this.Btn_actualizar_cargue.IconColor = System.Drawing.Color.Gainsboro;
             this.Btn_actualizar_cargue.IconSize = 14;
-            this.Btn_actualizar_cargue.Location = new System.Drawing.Point(189, 64);
+            this.Btn_actualizar_cargue.Location = new System.Drawing.Point(197, 64);
             this.Btn_actualizar_cargue.Name = "Btn_actualizar_cargue";
             this.Btn_actualizar_cargue.Rotation = 0D;
-            this.Btn_actualizar_cargue.Size = new System.Drawing.Size(89, 40);
+            this.Btn_actualizar_cargue.Size = new System.Drawing.Size(100, 40);
             this.Btn_actualizar_cargue.TabIndex = 73;
             this.Btn_actualizar_cargue.Text = "Actualizar Registros";
             this.Btn_actualizar_cargue.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -330,7 +331,7 @@
             this.Btn_Crear_plano.Location = new System.Drawing.Point(84, 64);
             this.Btn_Crear_plano.Name = "Btn_Crear_plano";
             this.Btn_Crear_plano.Rotation = 0D;
-            this.Btn_Crear_plano.Size = new System.Drawing.Size(89, 40);
+            this.Btn_Crear_plano.Size = new System.Drawing.Size(107, 40);
             this.Btn_Crear_plano.TabIndex = 59;
             this.Btn_Crear_plano.Text = "Crear Plano";
             this.Btn_Crear_plano.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -363,7 +364,7 @@
             // dgv_altas
             // 
             this.dgv_altas.AllowUserToAddRows = false;
-            this.dgv_altas.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgv_altas.BackgroundColor = System.Drawing.Color.White;
             this.dgv_altas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_altas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_altas.Location = new System.Drawing.Point(344, 123);
@@ -374,7 +375,7 @@
             // dgv_bajas
             // 
             this.dgv_bajas.AllowUserToAddRows = false;
-            this.dgv_bajas.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgv_bajas.BackgroundColor = System.Drawing.Color.White;
             this.dgv_bajas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_bajas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_bajas.Location = new System.Drawing.Point(808, 123);

@@ -85,14 +85,16 @@ namespace Usuarios_planta.Capa_presentacion
                 {
                     
                     cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("@Fecha_corte", Convert.ToDateTime(range.Cells[i, 1].Value2).ToString("dd/MM/yyyy")); //convertir formato fecha dado que viene 2020-07-29 y se formatea a 29/07/2020
+                    /*cmd.Parameters.AddWithValue("@Fecha_corte", Convert.ToDateTime(range.Cells[i, 1].Value2).ToString("dd/MM/yyyy"));*/ //convertir formato fecha dado que viene 2020-07-29 y se formatea a 29/07/2020
+                    cmd.Parameters.AddWithValue("@Fecha_corte", range.Cells[i, 1].Value2.ToString()); //convertir formato fecha dado que viene 2020-07-29 y se formatea a 29/07/2020
                     cmd.Parameters.AddWithValue("@Convenio", range.Cells[i, 2].Value2.ToString());
                     cmd.Parameters.AddWithValue("@Nombre_Convenio", range.Cells[i, 3].Value2);
                     cmd.Parameters.AddWithValue("@Consecutivo", range.Cells[i, 4].Value2.ToString());
                     cmd.Parameters.AddWithValue("@Scoring", range.Cells[i, 10].Value2.ToString());
                     cmd.Parameters.AddWithValue("@Nombre", range.Cells[i, 11].Value2.ToString());
                     cmd.Parameters.AddWithValue("@Cedula_cliente", range.Cells[i, 12].Value2.ToString());
-                    cmd.Parameters.AddWithValue("@Fecha_desembolso", Convert.ToDateTime(range.Cells[i, 13].Value2).ToString("yyyy-MM-dd"));
+                    //cmd.Parameters.AddWithValue("@Fecha_desembolso", Convert.ToDateTime(range.Cells[i, 13].Value2).ToString("yyyy-MM-dd"));
+                    cmd.Parameters.AddWithValue("@Fecha_desembolso", range.Cells[i, 13].Value2.ToString());
                     cmd.Parameters.AddWithValue("@Importe", range.Cells[i, 14].Value2.ToString());
                     cmd.Parameters.AddWithValue("@Plazo", range.Cells[i, 15].Value2.ToString());
                     cmd.Parameters.AddWithValue("@TasaE_A", range.Cells[i, 16].Value2.ToString());

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbtipo = new System.Windows.Forms.ComboBox();
             this.Txtcedula = new System.Windows.Forms.TextBox();
@@ -91,6 +91,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.label28 = new System.Windows.Forms.Label();
             this.dtpfecha_rpta = new System.Windows.Forms.DateTimePicker();
             this.cod_suspendido = new System.Windows.Forms.ComboBox();
             this.cmbrestriccion = new System.Windows.Forms.ComboBox();
@@ -910,6 +912,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.iconButton3);
+            this.groupBox4.Controls.Add(this.label28);
             this.groupBox4.Controls.Add(this.dtpfecha_rpta);
             this.groupBox4.Controls.Add(this.cod_suspendido);
             this.groupBox4.Controls.Add(this.cmbrestriccion);
@@ -936,6 +940,36 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Gestion";
             // 
+            // iconButton3
+            // 
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
+            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton3.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.ForeColor = System.Drawing.Color.White;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton3.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton3.IconSize = 18;
+            this.iconButton3.Location = new System.Drawing.Point(294, 50);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Rotation = 0D;
+            this.iconButton3.Size = new System.Drawing.Size(41, 25);
+            this.iconButton3.TabIndex = 292;
+            this.iconButton3.Text = "Ver";
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F);
+            this.label28.Location = new System.Drawing.Point(191, 30);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(102, 17);
+            this.label28.TabIndex = 186;
+            this.label28.Text = "Cod Suspension";
+            // 
             // dtpfecha_rpta
             // 
             this.dtpfecha_rpta.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -958,9 +992,9 @@
             "928",
             "914",
             "919"});
-            this.cod_suspendido.Location = new System.Drawing.Point(179, 50);
+            this.cod_suspendido.Location = new System.Drawing.Point(194, 50);
             this.cod_suspendido.Name = "cod_suspendido";
-            this.cod_suspendido.Size = new System.Drawing.Size(83, 25);
+            this.cod_suspendido.Size = new System.Drawing.Size(99, 25);
             this.cod_suspendido.TabIndex = 23;
             this.cod_suspendido.SelectedIndexChanged += new System.EventHandler(this.cod_suspendido_SelectedIndexChanged);
             // 
@@ -972,7 +1006,7 @@
             this.cmbrestriccion.Items.AddRange(new object[] {
             "SI",
             "NO"});
-            this.cmbrestriccion.Location = new System.Drawing.Point(647, 50);
+            this.cmbrestriccion.Location = new System.Drawing.Point(699, 50);
             this.cmbrestriccion.Name = "cmbrestriccion";
             this.cmbrestriccion.Size = new System.Drawing.Size(99, 25);
             this.cmbrestriccion.TabIndex = 26;
@@ -982,7 +1016,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F);
-            this.label5.Location = new System.Drawing.Point(644, 30);
+            this.label5.Location = new System.Drawing.Point(696, 30);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 17);
             this.label5.TabIndex = 184;
@@ -1025,7 +1059,7 @@
             this.cmbcargue.Items.AddRange(new object[] {
             "Ok Cargue",
             "Pendiente Cargue"});
-            this.cmbcargue.Location = new System.Drawing.Point(313, 50);
+            this.cmbcargue.Location = new System.Drawing.Point(365, 50);
             this.cmbcargue.Name = "cmbcargue";
             this.cmbcargue.Size = new System.Drawing.Size(163, 25);
             this.cmbcargue.TabIndex = 24;
@@ -1075,7 +1109,7 @@
             this.dtpcargue.CustomFormat = "dd/MM/yyyy";
             this.dtpcargue.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpcargue.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpcargue.Location = new System.Drawing.Point(513, 50);
+            this.dtpcargue.Location = new System.Drawing.Point(565, 50);
             this.dtpcargue.Name = "dtpcargue";
             this.dtpcargue.Size = new System.Drawing.Size(111, 25);
             this.dtpcargue.TabIndex = 25;
@@ -1095,7 +1129,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F);
-            this.label24.Location = new System.Drawing.Point(310, 30);
+            this.label24.Location = new System.Drawing.Point(362, 30);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(94, 17);
             this.label24.TabIndex = 30;
@@ -1105,7 +1139,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F);
-            this.label13.Location = new System.Drawing.Point(510, 30);
+            this.label13.Location = new System.Drawing.Point(562, 30);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(87, 17);
             this.label13.TabIndex = 11;
@@ -1147,9 +1181,9 @@
             this.label29.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F);
             this.label29.Location = new System.Drawing.Point(346, 92);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(118, 17);
+            this.label29.Size = new System.Drawing.Size(105, 17);
             this.label29.TabIndex = 182;
-            this.label29.Text = "Fecha Posible Rpta";
+            this.label29.Text = "Fecha Respuesta";
             // 
             // Btn_Guardar
             // 
@@ -1361,24 +1395,24 @@
             this.dgvPendientes_rta.BackgroundColor = System.Drawing.Color.White;
             this.dgvPendientes_rta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvPendientes_rta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPendientes_rta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPendientes_rta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPendientes_rta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPendientes_rta.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPendientes_rta.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPendientes_rta.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPendientes_rta.Location = new System.Drawing.Point(937, 614);
             this.dgvPendientes_rta.Name = "dgvPendientes_rta";
             this.dgvPendientes_rta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -1443,7 +1477,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1307, 830);
+            this.ClientSize = new System.Drawing.Size(1275, 788);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.label32);
@@ -1608,5 +1642,7 @@
         private System.Windows.Forms.Label label32;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Label label28;
+        private FontAwesome.Sharp.IconButton iconButton3;
     }
 }

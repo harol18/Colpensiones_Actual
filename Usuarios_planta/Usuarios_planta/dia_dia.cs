@@ -20,7 +20,7 @@ namespace Usuarios_planta
                                   ComboBox cmbtipo, TextBox Txtscoring, TextBox Txtconsecutivo, ComboBox cmbfuerza, ComboBox cmbdestino, TextBox Txtrtq, TextBox Txtmonto, 
                                   TextBox Txtplazo, TextBox Txtcuota, TextBox Txttotal,TextBox Txtpagare, TextBox Txtnit, TextBox Txtcuota_letras, TextBox Txttotal_letras,
                                   ComboBox cmbestado, ComboBox cmbcargue,DateTimePicker dtpcargue, ComboBox cmbresultado, 
-                                  ComboBox cmbrechazo, DateTimePicker dtpfecha_rpta,TextBox Txtplano_dia, TextBox Txtplano_pre, TextBox TxtN_Plano, TextBox Txtcomentarios, Label lblfecha_actual)
+                                  ComboBox cmbrechazo, DateTimePicker dtpfecha_rpta,TextBox Txtplano_dia, TextBox Txtplano_pre, TextBox TxtN_Plano, TextBox Txtcomentarios/*, Label lblfecha_actual*/)
         {
             con.Open();
             MySqlCommand cmd = new MySqlCommand("insertar_colp_dia", con);
@@ -64,9 +64,8 @@ namespace Usuarios_planta
                 cmd.Parameters.AddWithValue("@_Plano_Pre", Txtplano_pre.Text);
                 cmd.Parameters.AddWithValue("@_Plano", TxtN_Plano.Text);
                 cmd.Parameters.AddWithValue("@_Comentarios", Txtcomentarios.Text);
-                cmd.Parameters.AddWithValue("@_Id_Funcionario", usuario.Identificacion);                
-                cmd.Parameters.AddWithValue("@_CE", usuario.CE);
-                cmd.Parameters.AddWithValue("@_Fecha_Gestion", lblfecha_actual.Text);
+                cmd.Parameters.AddWithValue("@_Id_Funcionario", usuario.Identificacion);         
+                //cmd.Parameters.AddWithValue("@_Fecha_Gestion", lblfecha_actual.Text);
                 cmd.ExecuteNonQuery();
                 myTrans.Commit();
                 MessageBox.Show("Información Almacenada con Éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -387,7 +386,7 @@ namespace Usuarios_planta
 
         public void rescate_rtq(TextBox Txtafiliacion2, TextBox Txtcedula, TextBox Txtnit, TextBox Txtcuota, TextBox Txtplazo,
                                 TextBox Txtpagare, TextBox Txtplano_pre, TextBox Txtplano_dia, DateTimePicker dtpcargue, 
-                                TextBox TxtIDfuncionario, TextBox TxtNomFuncionario) 
+                                TextBox TxtIDfuncionario/*, TextBox TxtNomFuncionario*/) 
         {
             con.Open();
             MySqlCommand cmd = new MySqlCommand("rescate_rtq", con);
@@ -407,7 +406,7 @@ namespace Usuarios_planta
                 cmd.Parameters.AddWithValue("@_Plano_dia", Txtplano_dia.Text);
                 cmd.Parameters.AddWithValue("@_Fecha_cargue", dtpcargue.Text);
                 cmd.Parameters.AddWithValue("@_Id_Funcionario", TxtIDfuncionario.Text);
-                cmd.Parameters.AddWithValue("@_Nombre_Funcionario", TxtNomFuncionario.Text);
+                //cmd.Parameters.AddWithValue("@_Nombre_Funcionario", TxtNomFuncionario.Text);
                 cmd.ExecuteNonQuery();
                 myTrans.Commit();
                 MessageBox.Show("Rescate Registrado","Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);

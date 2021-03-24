@@ -164,10 +164,7 @@ namespace Usuarios_planta
 
         private void Btndia_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new Formdia());
-            //this.Hide();
-            //Form formulario = new Formdia();
-            //formulario.Show();
+            AbrirFormHijo(new Formdia());           
         }
 
         private void BtnInformes_colp_Click(object sender, EventArgs e)
@@ -241,6 +238,11 @@ namespace Usuarios_planta
         private void BtnInformes_dia_Click(object sender, EventArgs e)
         {
             AbrirFormHijo(new Informes_dia());
+        }
+
+        private void BtnAdmin_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new FrmAdministrador());
         }
     }
 }

@@ -156,7 +156,7 @@ namespace Usuarios_planta.Capa_presentacion
         
         private void Planos_Load(object sender, EventArgs e)
         {            
-            lblfecha_actual.Text = fecha.ToString("dd/MM/yyyy");
+            lblfecha_actual.Text = fecha.ToString("yyyy-MM-dd");
             String sCadena = fecha.ToString("dd/MM/yyyy");
             String año = sCadena.Substring(6, 4);
             String mes = sCadena.Substring(3, 2);

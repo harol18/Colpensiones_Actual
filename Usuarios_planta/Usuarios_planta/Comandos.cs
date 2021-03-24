@@ -14,7 +14,7 @@ using Usuarios_planta.Formularios;
 namespace Usuarios_planta
 {
     class Comandos
-    {        
+    {
         MySqlConnection con = new MySqlConnection("server=;Uid=;password=;database=dblibranza;port=3306;persistsecurityinfo=True;");
 
         public void Accesso_Aplicacion()
@@ -91,8 +91,7 @@ namespace Usuarios_planta
                 cmd.Parameters.AddWithValue("@_Plano_Pre", Txtplano_pre.Text);
                 cmd.Parameters.AddWithValue("@_Plano", TxtN_Plano.Text);
                 cmd.Parameters.AddWithValue("@_Comentarios", Txtcomentarios.Text);                
-                cmd.Parameters.AddWithValue("@_Id_Funcionario", usuario.Identificacion);
-                cmd.Parameters.AddWithValue("@_CE", usuario.CE);
+                cmd.Parameters.AddWithValue("@_Id_Funcionario", usuario.Identificacion);                
                 cmd.ExecuteNonQuery();
                 myTrans.Commit();
                 MessageBox.Show("Información Almacenada con Éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -337,7 +336,7 @@ namespace Usuarios_planta
 
                     cmd.Parameters.AddWithValue("@_Afiliacion", Convert.ToString(row.Cells[0].Value));
                     cmd.Parameters.AddWithValue("@_plano", Txtplano_alta.Text);
-                    cmd.Parameters.AddWithValue("@_Fecha_cargue", fecha.ToString("dd/MM/yyyy"));
+                    //cmd.Parameters.AddWithValue("@_Fecha_cargue", fecha.ToString("dd/MM/yyyy"));
                     cmd.ExecuteNonQuery();
                 }
                 con.Close();
@@ -365,7 +364,7 @@ namespace Usuarios_planta
                     cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@_N_Afiliacion2", Convert.ToString(row.Cells[0].Value));
                     cmd.Parameters.AddWithValue("@_Estado_cargue", "Ok Cargue");
-                    cmd.Parameters.AddWithValue("@_Fecha_Cargue", fecha.ToString("dd/MM/yyyy"));
+                    cmd.Parameters.AddWithValue("@_Fecha_Cargue", fecha.ToString("yyyy-MM-dd"));
                     cmd.Parameters.AddWithValue("@_Fecha_desembolso", dtp_cargue.Text);
                     cmd.Parameters.AddWithValue("@_Respuesta_Cargue", "Pdte Dictamen");
                     cmd.Parameters.AddWithValue("@_Plano", Txtplano_alta.Text);
@@ -394,7 +393,7 @@ namespace Usuarios_planta
                     cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@_N_Afiliacion2", Convert.ToString(row.Cells[0].Value));
                     cmd.Parameters.AddWithValue("@_Estado_cargue", "Ok Cargue");
-                    cmd.Parameters.AddWithValue("@_Fecha_Cargue", fecha.ToString("dd/MM/yyyy"));
+                    cmd.Parameters.AddWithValue("@_Fecha_Cargue", fecha.ToString("yyyy-MM-dd"));
                     cmd.Parameters.AddWithValue("@_Respuesta_Cargue", "Pdte Dictamen");
                     cmd.Parameters.AddWithValue("@_Plano", Txtplano_alta.Text);
                     cmd.ExecuteNonQuery();
@@ -422,7 +421,7 @@ namespace Usuarios_planta
                     cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@_N_Afiliacion2", Convert.ToString(row.Cells[2].Value));
                     cmd.Parameters.AddWithValue("@_Respuesta_Cargue", Convert.ToString(row.Cells[3].Value));
-                    cmd.Parameters.AddWithValue("@_Fecha_respuesta", fecha.ToString("dd/MM/yyyy"));
+                    cmd.Parameters.AddWithValue("@_Fecha_respuesta", fecha.ToString("yyyy-MM-dd"));
                     cmd.Parameters.AddWithValue("@_Causal_Rechazo", Convert.ToString(row.Cells[4].Value));
                     cmd.ExecuteNonQuery();
                 }
@@ -505,6 +504,32 @@ namespace Usuarios_planta
                 MessageBox.Show("", ex.ToString());
                 con.Close();
                 MessageBox.Show("Conexion cerrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void Actualizar_Contraseña(TextBox Txtusuario, TextBox Txtcontraseña)
+        {
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand("actualizar_contraseña", con);
+            MySqlTransaction myTrans; // Iniciar una transacción local 
+            myTrans = con.BeginTransaction(); // Debe asignar tanto el objeto de transacción como la conexión // al objeto de Comando para una transacción local pendiente
+            try
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@_Identificacion", Txtusuario.Text);
+                cmd.Parameters.AddWithValue("@_Contraseña", Txtcontraseña.Text);
+                cmd.ExecuteNonQuery();
+                myTrans.Commit();
+                MessageBox.Show("Información Almacenada con Éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            }
+            catch (Exception ex)
+            {
+                myTrans.Rollback();
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                con.Close();
             }
         }
     }

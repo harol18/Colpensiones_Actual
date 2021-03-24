@@ -67,13 +67,13 @@ namespace Usuarios_planta.Capa_presentacion
 
         private void Formdia_Load(object sender, EventArgs e)
         {      
-            lblfecha_actual.Text = fecha.ToString("yyyy/MM/dd");
+            lblfecha_actual.Text = fecha.ToString("yyyy-MM-dd");
             dtpcargue.Text = "01/01/2020";
             dtpfecha_rpta.Text = "01/01/2020";
             lblrescate.Visible = false;
             lbafiliacion.Visible = false;
             cmds_dia.Total_Fecha_Rta(lblfecha_actual, lblhoy);
-            cmds_dia.Total_Fecha_Rta_anterior(lblfecha_actual, lblFecha_anterior);
+            cmds_dia.Total_Fecha_Rta_anterior(lblfecha_actual, lblFecha_anterior);           
         }
 
         private void Txtafiliacion2_Validated(object sender, EventArgs e)
@@ -265,7 +265,7 @@ namespace Usuarios_planta.Capa_presentacion
                 cmds_dia.Insertar_colp(Txtradicado, Txtcedula, Txtnombre, TxtEstado_cliente, Txtafiliacion1, Txtafiliacion2, cmbtipo,
                                    Txtscoring, Txtconsecutivo, cmbfuerza, cmbdestino, Txtrtq, Txtmonto, Txtplazo, Txtcuota, Txttotal, Txtpagare, Txtnit,
                                    Txtcuota_letras, Txttotal_letras, cmbestado, cmbcargue, dtpcargue, cmbresultado,
-                                   cmbrechazo, dtpfecha_rpta, Txtplano_dia, Txtplano_pre, TxtN_Plano, Txtcomentarios, lblfecha_actual);                
+                                   cmbrechazo, dtpfecha_rpta, Txtplano_dia, Txtplano_pre, TxtN_Plano, Txtcomentarios);                
             }
         }
 
@@ -375,7 +375,7 @@ namespace Usuarios_planta.Capa_presentacion
             
 
             if (cmbestado.Text == "Suspendida" && cod_suspendido.Text=="920")
-            {
+            {                
                 Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " Convenio ISS Destino " + cmbdestino.Text + " Se reporta novedad a area encargada " + extrae + " 920" ;
             }
             else if (cmbestado.Text == "Suspendida" && cod_suspendido.Text == "928")
@@ -511,10 +511,6 @@ namespace Usuarios_planta.Capa_presentacion
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            //Form formulario = new Formdia();
-            //formulario.Show();
-
             Txtradicado.Text = null;
             Txtcedula.Text = null;
             Txtradicado.Text = null;
@@ -556,6 +552,20 @@ namespace Usuarios_planta.Capa_presentacion
         {
             string extrae;
             extrae = usuario.Identificacion.Substring(usuario.Identificacion.Length - 3); // extrae los ultimos 5 digitos del textbox 
+
+            string d = dtpcargue.Value.DayOfWeek.ToString();
+            DateTime dt = new DateTime();
+            dt = Convert.ToDateTime(dtpcargue.Value);
+            dt = dt.AddDays(0);
+
+            if (d == "Monday" || d== "Tuesday")
+            {
+                dtpfecha_rpta.Value = dt.AddDays(3);
+            }
+            else if (d == "Wednesday" || d == "Thursday" || d == "Friday")
+            {
+                dtpfecha_rpta.Value = dt.AddDays(5);
+            }
 
             if (cmbestado.Text == "Aprobada")
             {
@@ -766,6 +776,12 @@ namespace Usuarios_planta.Capa_presentacion
         private void iconButton2_Click(object sender, EventArgs e)
         {
             cmds_dia.Datos_fecha_hoy(dgvPendientes_rta, lblfecha_actual);
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            Form formulario = new FrmCodigos_Suspension();
+            formulario.Show();
         }
     }
 }

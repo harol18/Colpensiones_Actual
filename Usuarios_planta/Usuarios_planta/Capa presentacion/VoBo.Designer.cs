@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.BtnAdmin = new FontAwesome.Sharp.IconButton();
             this.panel_planos = new System.Windows.Forms.Panel();
             this.Btnplanos_dia = new FontAwesome.Sharp.IconButton();
             this.Btnplanos_ckl = new FontAwesome.Sharp.IconButton();
@@ -58,6 +59,7 @@
             // panelSideMenu
             // 
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
+            this.panelSideMenu.Controls.Add(this.BtnAdmin);
             this.panelSideMenu.Controls.Add(this.panel_planos);
             this.panelSideMenu.Controls.Add(this.BtnCrear_planos);
             this.panelSideMenu.Controls.Add(this.BtnCargue_archivos);
@@ -70,8 +72,33 @@
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(143, 749);
+            this.panelSideMenu.Size = new System.Drawing.Size(152, 861);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // BtnAdmin
+            // 
+            this.BtnAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnAdmin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnAdmin.FlatAppearance.BorderSize = 0;
+            this.BtnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAdmin.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnAdmin.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAdmin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.BtnAdmin.IconChar = FontAwesome.Sharp.IconChar.UsersCog;
+            this.BtnAdmin.IconColor = System.Drawing.Color.Gainsboro;
+            this.BtnAdmin.IconSize = 25;
+            this.BtnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAdmin.Location = new System.Drawing.Point(0, 566);
+            this.BtnAdmin.Name = "BtnAdmin";
+            this.BtnAdmin.Padding = new System.Windows.Forms.Padding(1, 0, 20, 0);
+            this.BtnAdmin.Rotation = 0D;
+            this.BtnAdmin.Size = new System.Drawing.Size(152, 60);
+            this.BtnAdmin.TabIndex = 16;
+            this.BtnAdmin.Text = "Administrador";
+            this.BtnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAdmin.UseVisualStyleBackColor = true;
+            this.BtnAdmin.Click += new System.EventHandler(this.BtnAdmin_Click);
             // 
             // panel_planos
             // 
@@ -80,7 +107,7 @@
             this.panel_planos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_planos.Location = new System.Drawing.Point(0, 489);
             this.panel_planos.Name = "panel_planos";
-            this.panel_planos.Size = new System.Drawing.Size(143, 77);
+            this.panel_planos.Size = new System.Drawing.Size(152, 77);
             this.panel_planos.TabIndex = 15;
             // 
             // Btnplanos_dia
@@ -101,7 +128,7 @@
             this.Btnplanos_dia.Name = "Btnplanos_dia";
             this.Btnplanos_dia.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
             this.Btnplanos_dia.Rotation = 0D;
-            this.Btnplanos_dia.Size = new System.Drawing.Size(143, 40);
+            this.Btnplanos_dia.Size = new System.Drawing.Size(152, 40);
             this.Btnplanos_dia.TabIndex = 2;
             this.Btnplanos_dia.Text = "Dia - Dia";
             this.Btnplanos_dia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,7 +155,7 @@
             this.Btnplanos_ckl.Name = "Btnplanos_ckl";
             this.Btnplanos_ckl.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
             this.Btnplanos_ckl.Rotation = 0D;
-            this.Btnplanos_ckl.Size = new System.Drawing.Size(143, 40);
+            this.Btnplanos_ckl.Size = new System.Drawing.Size(152, 40);
             this.Btnplanos_ckl.TabIndex = 1;
             this.Btnplanos_ckl.Text = "CK Libranza";
             this.Btnplanos_ckl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -154,7 +181,7 @@
             this.BtnCrear_planos.Name = "BtnCrear_planos";
             this.BtnCrear_planos.Padding = new System.Windows.Forms.Padding(1, 0, 20, 0);
             this.BtnCrear_planos.Rotation = 0D;
-            this.BtnCrear_planos.Size = new System.Drawing.Size(143, 60);
+            this.BtnCrear_planos.Size = new System.Drawing.Size(152, 60);
             this.BtnCrear_planos.TabIndex = 14;
             this.BtnCrear_planos.Text = "Planos";
             this.BtnCrear_planos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -180,7 +207,7 @@
             this.BtnCargue_archivos.Name = "BtnCargue_archivos";
             this.BtnCargue_archivos.Padding = new System.Windows.Forms.Padding(1, 0, 20, 0);
             this.BtnCargue_archivos.Rotation = 0D;
-            this.BtnCargue_archivos.Size = new System.Drawing.Size(143, 60);
+            this.BtnCargue_archivos.Size = new System.Drawing.Size(152, 60);
             this.BtnCargue_archivos.TabIndex = 13;
             this.BtnCargue_archivos.Text = "Cargue Archivos";
             this.BtnCargue_archivos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -196,7 +223,7 @@
             this.panelinformes.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelinformes.Location = new System.Drawing.Point(0, 289);
             this.panelinformes.Name = "panelinformes";
-            this.panelinformes.Size = new System.Drawing.Size(143, 80);
+            this.panelinformes.Size = new System.Drawing.Size(152, 80);
             this.panelinformes.TabIndex = 12;
             // 
             // BtnInformes_dia
@@ -217,7 +244,7 @@
             this.BtnInformes_dia.Name = "BtnInformes_dia";
             this.BtnInformes_dia.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
             this.BtnInformes_dia.Rotation = 0D;
-            this.BtnInformes_dia.Size = new System.Drawing.Size(143, 40);
+            this.BtnInformes_dia.Size = new System.Drawing.Size(152, 40);
             this.BtnInformes_dia.TabIndex = 10;
             this.BtnInformes_dia.Text = "Dia - Dia";
             this.BtnInformes_dia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -243,7 +270,7 @@
             this.BtnInformes_ckl.Name = "BtnInformes_ckl";
             this.BtnInformes_ckl.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
             this.BtnInformes_ckl.Rotation = 0D;
-            this.BtnInformes_ckl.Size = new System.Drawing.Size(143, 40);
+            this.BtnInformes_ckl.Size = new System.Drawing.Size(152, 40);
             this.BtnInformes_ckl.TabIndex = 11;
             this.BtnInformes_ckl.Text = "CK Libranza";
             this.BtnInformes_ckl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -268,7 +295,7 @@
             this.BtnInformes.Name = "BtnInformes";
             this.BtnInformes.Padding = new System.Windows.Forms.Padding(1, 0, 20, 0);
             this.BtnInformes.Rotation = 0D;
-            this.BtnInformes.Size = new System.Drawing.Size(143, 60);
+            this.BtnInformes.Size = new System.Drawing.Size(152, 60);
             this.BtnInformes.TabIndex = 9;
             this.BtnInformes.Text = "Informes";
             this.BtnInformes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -290,11 +317,11 @@
             this.BtnSalir.IconColor = System.Drawing.Color.Gainsboro;
             this.BtnSalir.IconSize = 29;
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.Location = new System.Drawing.Point(0, 709);
+            this.BtnSalir.Location = new System.Drawing.Point(0, 821);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Padding = new System.Windows.Forms.Padding(1, 0, 20, 0);
             this.BtnSalir.Rotation = 0D;
-            this.BtnSalir.Size = new System.Drawing.Size(143, 40);
+            this.BtnSalir.Size = new System.Drawing.Size(152, 40);
             this.BtnSalir.TabIndex = 8;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -310,7 +337,7 @@
             this.panelCheques.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCheques.Location = new System.Drawing.Point(0, 149);
             this.panelCheques.Name = "panelCheques";
-            this.panelCheques.Size = new System.Drawing.Size(143, 80);
+            this.panelCheques.Size = new System.Drawing.Size(152, 80);
             this.panelCheques.TabIndex = 4;
             // 
             // Btndia
@@ -331,7 +358,7 @@
             this.Btndia.Name = "Btndia";
             this.Btndia.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
             this.Btndia.Rotation = 0D;
-            this.Btndia.Size = new System.Drawing.Size(143, 40);
+            this.Btndia.Size = new System.Drawing.Size(152, 40);
             this.Btndia.TabIndex = 1;
             this.Btndia.Text = "Dia - Dia";
             this.Btndia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -358,7 +385,7 @@
             this.Btncklb.Name = "Btncklb";
             this.Btncklb.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
             this.Btncklb.Rotation = 0D;
-            this.Btncklb.Size = new System.Drawing.Size(143, 40);
+            this.Btncklb.Size = new System.Drawing.Size(152, 40);
             this.Btncklb.TabIndex = 0;
             this.Btncklb.Text = "CK Libranza";
             this.Btncklb.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -384,7 +411,7 @@
             this.BtnColpensiones.Name = "BtnColpensiones";
             this.BtnColpensiones.Padding = new System.Windows.Forms.Padding(1, 0, 20, 0);
             this.BtnColpensiones.Rotation = 0D;
-            this.BtnColpensiones.Size = new System.Drawing.Size(143, 60);
+            this.BtnColpensiones.Size = new System.Drawing.Size(152, 60);
             this.BtnColpensiones.TabIndex = 3;
             this.BtnColpensiones.Text = "Colpensiones";
             this.BtnColpensiones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -399,7 +426,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(143, 89);
+            this.panel2.Size = new System.Drawing.Size(152, 89);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox2
@@ -417,9 +444,9 @@
             this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
             this.panelTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitulo.Location = new System.Drawing.Point(143, 0);
+            this.panelTitulo.Location = new System.Drawing.Point(152, 0);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(1227, 45);
+            this.panelTitulo.Size = new System.Drawing.Size(1282, 45);
             this.panelTitulo.TabIndex = 1;
             this.panelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseDown);
             this.panelTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseMove);
@@ -431,9 +458,9 @@
             this.panelContenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panelContenedor.Location = new System.Drawing.Point(143, 45);
+            this.panelContenedor.Location = new System.Drawing.Point(152, 45);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1227, 704);
+            this.panelContenedor.Size = new System.Drawing.Size(1282, 816);
             this.panelContenedor.TabIndex = 2;
             // 
             // VoBo
@@ -441,7 +468,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1434, 861);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.panelSideMenu);
@@ -480,5 +507,6 @@
         private System.Windows.Forms.Panel panel_planos;
         private FontAwesome.Sharp.IconButton Btnplanos_dia;
         private FontAwesome.Sharp.IconButton Btnplanos_ckl;
+        private FontAwesome.Sharp.IconButton BtnAdmin;
     }
 }

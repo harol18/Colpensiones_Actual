@@ -260,9 +260,6 @@ namespace Usuarios_planta.Formularios
                                    Txtscoring,Txtconsecutivo,cmbfuerza,cmbdestino,Txtmonto,Txtplazo,Txtcuota,Txttotal,Txtpagare,Txtnit,Txtentidad,
                                    Txtcuota_letras,Txttotal_letras,cmbestado,cmbcargue,dtpcargue,dtpfecha_desembolso,cmbresultado,
                                    cmbrechazo,dtpfecha_rpta,Txtplano_dia,Txtplano_pre,TxtN_Plano,Txtcomentarios);
-                this.Close();
-                Form formulario = new FormGiros();
-                formulario.Show();
             }
         }
 
@@ -466,9 +463,35 @@ namespace Usuarios_planta.Formularios
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Form formulario = new FormGiros();
-            formulario.Show();
+            Txtradicado.Text = null;
+            cmbtipo.Text = null;
+            Txtcedula.Text = null;
+            Txtnombre.Text = null;
+            TxtEstado_cliente.Text = null;
+            Txtscoring.Text = null;
+            Txtconsecutivo.Text = null;
+            cmbfuerza.Text = null;
+            Txtmonto.Text = null;
+            Txtplazo.Text = null;
+            Txtcuota.Text = null;
+            Txtcuota_letras.Text = null;
+            Txttotal.Text = null;
+            Txttotal_letras.Text = null;
+            Txtpagare.Text = null;
+            Txtafiliacion1.Text = null;
+            Txtafiliacion2.Text = null;
+            Txtentidad.Text = null;
+            Txtplano_dia.Text = null;
+            Txtplano_pre.Text = null;
+            TxtN_Plano.Text = null;
+            cmbestado.Text = null;
+            cmbcargue.Text = null;
+            dtpcargue.Text = "01/01/2020";
+            dtpfecha_desembolso.Text = "01/01/2020";
+            cmbresultado.Text = null;
+            cmbrechazo.Text = null;
+            dtpfecha_rpta.Text = "01/01/2020";
+            Txtcomentarios.Text = null;
         }
        
         private void Txtcuota_letras_KeyPress(object sender, KeyPressEventArgs e)
@@ -557,6 +580,26 @@ namespace Usuarios_planta.Formularios
         }
 
         private void cmbtipo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbfuerza_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbestado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbcargue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbresultado_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
         }

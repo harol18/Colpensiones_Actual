@@ -120,7 +120,7 @@
             // dgv_informes
             // 
             this.dgv_informes.AllowUserToAddRows = false;
-            this.dgv_informes.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgv_informes.BackgroundColor = System.Drawing.Color.White;
             this.dgv_informes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_informes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_informes.Location = new System.Drawing.Point(411, 128);
@@ -130,7 +130,7 @@
             // 
             // cmbinformes
             // 
-            this.cmbinformes.BackColor = System.Drawing.SystemColors.Menu;
+            this.cmbinformes.BackColor = System.Drawing.Color.White;
             this.cmbinformes.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbinformes.FormattingEnabled = true;
             this.cmbinformes.Items.AddRange(new object[] {
@@ -260,7 +260,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Informes";
             this.Text = "Informes";
-            this.Load += new System.EventHandler(this.Informes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_informes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_busqueda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();

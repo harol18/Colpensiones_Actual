@@ -101,7 +101,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(11, 123);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(304, 411);
+            this.panel3.Size = new System.Drawing.Size(320, 411);
             this.panel3.TabIndex = 49;
             // 
             // label6
@@ -117,7 +117,7 @@
             // 
             // Txtplano_baja
             // 
-            this.Txtplano_baja.BackColor = System.Drawing.Color.Snow;
+            this.Txtplano_baja.BackColor = System.Drawing.Color.White;
             this.Txtplano_baja.Enabled = false;
             this.Txtplano_baja.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txtplano_baja.Location = new System.Drawing.Point(7, 285);
@@ -140,7 +140,7 @@
             // 
             // Txtplano_alta
             // 
-            this.Txtplano_alta.BackColor = System.Drawing.Color.Snow;
+            this.Txtplano_alta.BackColor = System.Drawing.Color.White;
             this.Txtplano_alta.Enabled = false;
             this.Txtplano_alta.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txtplano_alta.Location = new System.Drawing.Point(7, 209);
@@ -174,7 +174,7 @@
             // 
             // TxtCod_plano
             // 
-            this.TxtCod_plano.BackColor = System.Drawing.Color.Snow;
+            this.TxtCod_plano.BackColor = System.Drawing.Color.White;
             this.TxtCod_plano.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCod_plano.Location = new System.Drawing.Point(7, 365);
             this.TxtCod_plano.MaxLength = 2;
@@ -198,7 +198,7 @@
             // 
             // cmb_Gestion2
             // 
-            this.cmb_Gestion2.BackColor = System.Drawing.Color.Snow;
+            this.cmb_Gestion2.BackColor = System.Drawing.Color.White;
             this.cmb_Gestion2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmb_Gestion2.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Gestion2.FormattingEnabled = true;
@@ -219,7 +219,7 @@
             this.panel4.ForeColor = System.Drawing.Color.White;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(303, 24);
+            this.panel4.Size = new System.Drawing.Size(319, 24);
             this.panel4.TabIndex = 0;
             // 
             // label10
@@ -262,15 +262,15 @@
             this.Btn_actualizar_cargue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_actualizar_cargue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_actualizar_cargue.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Btn_actualizar_cargue.Font = new System.Drawing.Font("SF Pro Display", 9.75F);
+            this.Btn_actualizar_cargue.Font = new System.Drawing.Font("Roboto", 9F);
             this.Btn_actualizar_cargue.ForeColor = System.Drawing.Color.White;
             this.Btn_actualizar_cargue.IconChar = FontAwesome.Sharp.IconChar.Database;
             this.Btn_actualizar_cargue.IconColor = System.Drawing.Color.Gainsboro;
             this.Btn_actualizar_cargue.IconSize = 16;
-            this.Btn_actualizar_cargue.Location = new System.Drawing.Point(163, 66);
+            this.Btn_actualizar_cargue.Location = new System.Drawing.Point(194, 66);
             this.Btn_actualizar_cargue.Name = "Btn_actualizar_cargue";
             this.Btn_actualizar_cargue.Rotation = 0D;
-            this.Btn_actualizar_cargue.Size = new System.Drawing.Size(89, 40);
+            this.Btn_actualizar_cargue.Size = new System.Drawing.Size(115, 40);
             this.Btn_actualizar_cargue.TabIndex = 72;
             this.Btn_actualizar_cargue.Text = "Actualizar Registros";
             this.Btn_actualizar_cargue.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -283,7 +283,7 @@
             this.Btn_Crear_plano.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Crear_plano.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Crear_plano.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Btn_Crear_plano.Font = new System.Drawing.Font("SF Pro Display", 9.75F);
+            this.Btn_Crear_plano.Font = new System.Drawing.Font("Roboto", 9F);
             this.Btn_Crear_plano.ForeColor = System.Drawing.Color.White;
             this.Btn_Crear_plano.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             this.Btn_Crear_plano.IconColor = System.Drawing.Color.Gainsboro;
@@ -291,7 +291,7 @@
             this.Btn_Crear_plano.Location = new System.Drawing.Point(68, 66);
             this.Btn_Crear_plano.Name = "Btn_Crear_plano";
             this.Btn_Crear_plano.Rotation = 0D;
-            this.Btn_Crear_plano.Size = new System.Drawing.Size(89, 40);
+            this.Btn_Crear_plano.Size = new System.Drawing.Size(115, 40);
             this.Btn_Crear_plano.TabIndex = 59;
             this.Btn_Crear_plano.Text = "Crear Plano";
             this.Btn_Crear_plano.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -328,7 +328,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(94)))), ((int)(((byte)(157)))));
-            this.label3.Location = new System.Drawing.Point(358, 5);
+            this.label3.Location = new System.Drawing.Point(412, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(479, 38);
             this.label3.TabIndex = 52;
@@ -338,7 +338,7 @@
             // dgv_altas
             // 
             this.dgv_altas.AllowUserToAddRows = false;
-            this.dgv_altas.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgv_altas.BackgroundColor = System.Drawing.Color.White;
             this.dgv_altas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_altas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_altas.Location = new System.Drawing.Point(355, 123);
@@ -349,7 +349,7 @@
             // dgv_bajas
             // 
             this.dgv_bajas.AllowUserToAddRows = false;
-            this.dgv_bajas.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgv_bajas.BackgroundColor = System.Drawing.Color.White;
             this.dgv_bajas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_bajas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_bajas.Location = new System.Drawing.Point(355, 428);
@@ -416,7 +416,7 @@
             // dgv_datos_plano
             // 
             this.dgv_datos_plano.AllowUserToAddRows = false;
-            this.dgv_datos_plano.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgv_datos_plano.BackgroundColor = System.Drawing.Color.White;
             this.dgv_datos_plano.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_datos_plano.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_datos_plano.Location = new System.Drawing.Point(845, 200);
@@ -426,7 +426,7 @@
             // 
             // Txtbusqueda
             // 
-            this.Txtbusqueda.BackColor = System.Drawing.Color.Snow;
+            this.Txtbusqueda.BackColor = System.Drawing.Color.White;
             this.Txtbusqueda.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F);
             this.Txtbusqueda.Location = new System.Drawing.Point(845, 158);
             this.Txtbusqueda.Multiline = true;
@@ -509,15 +509,15 @@
             this.Btn_actualizar_rta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_actualizar_rta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_actualizar_rta.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Btn_actualizar_rta.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_actualizar_rta.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_actualizar_rta.ForeColor = System.Drawing.Color.White;
             this.Btn_actualizar_rta.IconChar = FontAwesome.Sharp.IconChar.Database;
             this.Btn_actualizar_rta.IconColor = System.Drawing.Color.Gainsboro;
             this.Btn_actualizar_rta.IconSize = 16;
-            this.Btn_actualizar_rta.Location = new System.Drawing.Point(1170, 151);
+            this.Btn_actualizar_rta.Location = new System.Drawing.Point(1148, 151);
             this.Btn_actualizar_rta.Name = "Btn_actualizar_rta";
             this.Btn_actualizar_rta.Rotation = 0D;
-            this.Btn_actualizar_rta.Size = new System.Drawing.Size(89, 40);
+            this.Btn_actualizar_rta.Size = new System.Drawing.Size(111, 40);
             this.Btn_actualizar_rta.TabIndex = 82;
             this.Btn_actualizar_rta.Text = "Actualizar Registros";
             this.Btn_actualizar_rta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -535,7 +535,7 @@
             this.panel1.Controls.Add(this.Btn_Crear_plano);
             this.panel1.Location = new System.Drawing.Point(11, 550);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(304, 166);
+            this.panel1.Size = new System.Drawing.Size(320, 166);
             this.panel1.TabIndex = 84;
             // 
             // panel2
@@ -545,7 +545,7 @@
             this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(303, 24);
+            this.panel2.Size = new System.Drawing.Size(319, 24);
             this.panel2.TabIndex = 0;
             // 
             // label4

@@ -29,10 +29,14 @@ namespace Usuarios_planta.Capa_presentacion
         {
             try
             {
+                string user1 = Txtusuario.Text; //captura el dato registrado en el campo usuario
+                string pass1 = Txtcontraseña.Text;//captura el dato registrado en el campo contraseña
+                string epass1 = Encrypt.GetSHA256(pass1);//llama la clase encrypt y encripta el valor registrado en el campo contraseña
+
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand("Select Identificacion,nombre, CE from tf_usuarios where Identificacion=@Identificacion and Contraseña=@Contraseña", con);
                 cmd.Parameters.AddWithValue("@Identificacion", user);
-                cmd.Parameters.AddWithValue("@Contraseña", pass);
+                cmd.Parameters.AddWithValue("@Contraseña", epass1);// se envia el campo encriptado para validar si corresponde a la contraseña almacenada en la base de datos la cual esta encriptada.
                 MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -43,7 +47,7 @@ namespace Usuarios_planta.Capa_presentacion
                     MessageBox.Show("Bienvenido !! " + dt.Rows[0][1].ToString());
                     usuario.Identificacion = dt.Rows[0][0].ToString();
                     usuario.Nombre = dt.Rows[0][1].ToString();
-                    usuario.CE= dt.Rows[0][2].ToString();
+                    usuario.CE = dt.Rows[0][2].ToString();
                     cmds.Accesso_Aplicacion();
                     Form formulario = new VoBo();
                     formulario.Show();
@@ -85,6 +89,20 @@ namespace Usuarios_planta.Capa_presentacion
                 Txtcontraseña.UseSystemPasswordChar = true;
             else
                 Txtcontraseña.UseSystemPasswordChar = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string user1 = Txtusuario.Text;
+            string pass1 = Txtcontraseña.Text;
+            string epass1 = Encrypt.GetSHA256(pass1);
+            MessageBox.Show(epass1);
+        }
+
+        private void BtnCambiar_Contraseña_Click(object sender, EventArgs e)
+        {
+            Form formulario = new Cambiar_Contraseña();
+            formulario.Show();
         }
     }
 }
