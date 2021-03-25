@@ -200,7 +200,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Usuarios_planta.Properties.Resources.descarga;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(357, 424);
+            this.ClientSize = new System.Drawing.Size(357, 362);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";

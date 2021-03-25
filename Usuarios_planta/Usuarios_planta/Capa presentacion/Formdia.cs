@@ -20,6 +20,7 @@ namespace Usuarios_planta.Capa_presentacion
     {
         MySqlConnection con = new MySqlConnection("server=;Uid=;password=;database=dblibranza;port=3306;persistsecurityinfo=True;");
 
+
         Comandos cmds = new Comandos();
         dia_dia cmds_dia = new dia_dia();
         Conversion c = new Conversion();
@@ -373,14 +374,18 @@ namespace Usuarios_planta.Capa_presentacion
             string extrae;            
             extrae = usuario.Identificacion.Substring(usuario.Identificacion.Length - 3); // extrae los ultimos 5 digitos del textbox 
             
-
-            if (cmbestado.Text == "Suspendida" && cod_suspendido.Text=="920")
-            {                
-                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " Convenio ISS Destino " + cmbdestino.Text + " Se reporta novedad a area encargada " + extrae + " 920" ;
-            }
-            else if (cmbestado.Text == "Suspendida" && cod_suspendido.Text == "928")
+            if (cmbestado.Text == "Suspendida" && cod_suspendido.Text == "904")
             {
-                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " Se reporta al area de seguros bbva en espera de respuesta para continuar tramite de visto bueno pagador convenio ISS " + extrae + " 928";
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS operación con novedad en el convenio 10005 El número de libranza registrado en el archivo plano préstamo NO coincide con el indicado en la imagen de la plantilla autorización descuentos. convenio se encuentra en periodo de restriccion desde el dd/MM/yyyy hasta dd/MM/yyyy con posible fecha de respuesta el dd/MM/yyyy se vuelve a radicar en plataforma el dia " + dtpcargue.Text + " " + extrae + " 904";
+            }
+            else if (cmbestado.Text == "Suspendida" && cod_suspendido.Text == "907")
+            {
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " Convenio se encuentra en periodo de restriccion desde el dd/MM/yyyy hasta dd/MM/yyyy con posible fecha de respuesta el dd/MM/yyyy se radica en plataforma el dia " + dtpcargue.Text + " " + extrae + " 907";
+            }
+            else if (cmbestado.Text == "Suspendida" && cod_suspendido.Text == "908")
+            {
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Operacion se radica en plataforma el " + dtpcargue.Text + " con posible fecha de respuesta el dia  " + dtpfecha_rpta.Text + extrae + " 908";
+
             }
             else if (cmbestado.Text == "Suspendida" && cod_suspendido.Text == "914")
             {
@@ -390,6 +395,14 @@ namespace Usuarios_planta.Capa_presentacion
             {
                 Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " Se reporta al area de scoring / Cierre Operativo para ratificacion de condiciones del credito " + extrae + " 919";
             }
+            else if (cmbestado.Text == "Suspendida" && cod_suspendido.Text=="920")
+            {                
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " Convenio ISS Destino " + cmbdestino.Text + " Se reporta novedad a area encargada " + extrae + " 920" ;
+            }
+            else if (cmbestado.Text == "Suspendida" && cod_suspendido.Text == "928")
+            {
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " Se reporta al area de seguros bbva en espera de respuesta para continuar tramite de visto bueno pagador convenio ISS " + extrae + " 928";
+            }            
             else
             {
 
@@ -590,6 +603,36 @@ namespace Usuarios_planta.Capa_presentacion
                 Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Operacion se radica en plataforma el " + dtpcargue.Text + " CON POSIBLE FECHA DE RESPUESTA EL " + dtpfecha_rpta.Text + " 908" +
                     " " + extrae;
             }
+            else if (cmbestado.Text == "Suspendida" && cod_suspendido.Text == "904")
+            {
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS operación con novedad en el convenio 10005 El número de libranza registrado en el archivo plano préstamo NO coincide con el indicado en la imagen de la plantilla autorización descuentos. convenio se encuentra en periodo de restriccion desde el dd/MM/yyyy hasta dd/MM/yyyy con posible fecha de respuesta el dd/MM/yyyy se vuelve a radicar en plataforma el dia " + dtpcargue.Text + " " + extrae + " 904";
+            }
+            else if (cmbestado.Text == "Suspendida" && cod_suspendido.Text == "907")
+            {
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " Convenio se encuentra en periodo de restriccion desde el dd/MM/yyyy hasta dd/MM/yyyy con posible fecha de respuesta el dd/MM/yyyy se radica en plataforma el dia " + dtpcargue.Text + " " + extrae + " 907 ";
+            }
+            else if (cmbestado.Text == "Suspendida" && cod_suspendido.Text == "908")
+            {
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " ISS Operacion se radica en plataforma el " + dtpcargue.Text + " con posible fecha de respuesta el dia  " + dtpfecha_rpta.Text + extrae + " " + " 908 ";
+
+            }
+            else if (cmbestado.Text == "Suspendida" && cod_suspendido.Text == "914")
+            {
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " Operacion reportada al area de retoques por novedad evaluacion y sancion " + extrae + " 914";
+            }
+            else if (cmbestado.Text == "Suspendida" && cod_suspendido.Text == "919")
+            {
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " Se reporta al area de scoring / Cierre Operativo para ratificacion de condiciones del credito " + extrae + " 919";
+            }
+            else if (cmbestado.Text == "Suspendida" && cod_suspendido.Text == "920")
+            {
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " Convenio ISS Destino " + cmbdestino.Text + " Se reporta novedad a area encargada " + extrae + " 920";
+            }
+            else if (cmbestado.Text == "Suspendida" && cod_suspendido.Text == "928")
+            {
+                Txtcomentarios.Text = fecha.ToString("ddMMyyyy") + " Se reporta al area de seguros bbva en espera de respuesta para continuar tramite de visto bueno pagador convenio ISS " + extrae + " 928";
+            }
+
             else if (cmbestado.Text == "Suspendida" && cmbrestriccion.Text == "")
             {
                 cod_suspendido.Visible = true;

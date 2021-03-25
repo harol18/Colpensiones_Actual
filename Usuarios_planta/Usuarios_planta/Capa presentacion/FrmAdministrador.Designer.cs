@@ -66,7 +66,7 @@ namespace Usuarios_planta.Capa_presentacion
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.iconPictureBox1);
             this.panel3.Controls.Add(this.label4);
@@ -80,7 +80,7 @@ namespace Usuarios_planta.Capa_presentacion
             // 
             // iconPictureBox1
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
             this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
@@ -93,7 +93,7 @@ namespace Usuarios_planta.Capa_presentacion
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Roboto", 9F);
             this.label4.Location = new System.Drawing.Point(35, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(182, 53);
@@ -104,10 +104,10 @@ namespace Usuarios_planta.Capa_presentacion
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(61, 83);
+            this.label5.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(80, 76);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 20);
+            this.label5.Size = new System.Drawing.Size(105, 18);
             this.label5.TabIndex = 2;
             this.label5.Text = "Base Asignacion";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -118,7 +118,7 @@ namespace Usuarios_planta.Capa_presentacion
             this.BtnCargar_asignacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCargar_asignacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCargar_asignacion.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnCargar_asignacion.Font = new System.Drawing.Font("Roboto Bk", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCargar_asignacion.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold);
             this.BtnCargar_asignacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(101)))), ((int)(((byte)(124)))));
             this.BtnCargar_asignacion.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnCargar_asignacion.IconColor = System.Drawing.Color.Black;
@@ -144,11 +144,11 @@ namespace Usuarios_planta.Capa_presentacion
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Roboto Cn", 24F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(94)))), ((int)(((byte)(157)))));
-            this.label2.Location = new System.Drawing.Point(291, 63);
+            this.label2.Location = new System.Drawing.Point(334, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(441, 43);
+            this.label2.Size = new System.Drawing.Size(372, 38);
             this.label2.TabIndex = 53;
             this.label2.Text = "Cargue Archivos Asignacion";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -166,7 +166,7 @@ namespace Usuarios_planta.Capa_presentacion
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAdministrador";            
+            this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);

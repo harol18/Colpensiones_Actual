@@ -56,22 +56,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Roboto Cn", 24F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(94)))), ((int)(((byte)(157)))));
-            this.label3.Location = new System.Drawing.Point(425, 25);
+            this.label3.Location = new System.Drawing.Point(431, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 43);
+            this.label3.Size = new System.Drawing.Size(303, 38);
             this.label3.TabIndex = 46;
-            this.label3.Text = "Informes";
+            this.label3.Text = "Informes Cpk Libranza";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(9, 89);
+            this.label36.Font = new System.Drawing.Font("Roboto", 11.25F);
+            this.label36.Location = new System.Drawing.Point(13, 108);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(142, 17);
+            this.label36.Size = new System.Drawing.Size(145, 18);
             this.label36.TabIndex = 80;
             this.label36.Text = "Seleccionar Informe";
             // 
@@ -79,20 +79,20 @@
             // 
             this.dtpinicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpinicio.CustomFormat = "yyyy-MM-dd";
-            this.dtpinicio.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpinicio.Font = new System.Drawing.Font("Roboto", 11.25F);
             this.dtpinicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpinicio.Location = new System.Drawing.Point(16, 196);
             this.dtpinicio.Name = "dtpinicio";
-            this.dtpinicio.Size = new System.Drawing.Size(111, 25);
+            this.dtpinicio.Size = new System.Drawing.Size(111, 26);
             this.dtpinicio.TabIndex = 84;
             // 
             // lbinicial
             // 
             this.lbinicial.AutoSize = true;
-            this.lbinicial.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbinicial.Location = new System.Drawing.Point(13, 174);
+            this.lbinicial.Font = new System.Drawing.Font("Roboto", 11.25F);
+            this.lbinicial.Location = new System.Drawing.Point(13, 175);
             this.lbinicial.Name = "lbinicial";
-            this.lbinicial.Size = new System.Drawing.Size(90, 17);
+            this.lbinicial.Size = new System.Drawing.Size(94, 18);
             this.lbinicial.TabIndex = 83;
             this.lbinicial.Text = "Fecha Inicial";
             // 
@@ -100,20 +100,20 @@
             // 
             this.dtpfinal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpfinal.CustomFormat = "yyyy-MM-dd";
-            this.dtpfinal.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpfinal.Font = new System.Drawing.Font("Roboto", 11.25F);
             this.dtpfinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpfinal.Location = new System.Drawing.Point(155, 196);
             this.dtpfinal.Name = "dtpfinal";
-            this.dtpfinal.Size = new System.Drawing.Size(111, 25);
+            this.dtpfinal.Size = new System.Drawing.Size(111, 26);
             this.dtpfinal.TabIndex = 86;
             // 
             // lbfinal
             // 
             this.lbfinal.AutoSize = true;
-            this.lbfinal.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbfinal.Location = new System.Drawing.Point(152, 174);
+            this.lbfinal.Font = new System.Drawing.Font("Roboto", 11.25F);
+            this.lbfinal.Location = new System.Drawing.Point(152, 175);
             this.lbfinal.Name = "lbfinal";
-            this.lbfinal.Size = new System.Drawing.Size(82, 17);
+            this.lbfinal.Size = new System.Drawing.Size(86, 18);
             this.lbfinal.TabIndex = 85;
             this.lbfinal.Text = "Fecha Final";
             // 
@@ -123,7 +123,7 @@
             this.dgv_informes.BackgroundColor = System.Drawing.Color.White;
             this.dgv_informes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_informes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_informes.Location = new System.Drawing.Point(411, 128);
+            this.dgv_informes.Location = new System.Drawing.Point(350, 128);
             this.dgv_informes.Name = "dgv_informes";
             this.dgv_informes.Size = new System.Drawing.Size(691, 484);
             this.dgv_informes.TabIndex = 87;
@@ -131,23 +131,23 @@
             // cmbinformes
             // 
             this.cmbinformes.BackColor = System.Drawing.Color.White;
-            this.cmbinformes.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbinformes.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbinformes.FormattingEnabled = true;
             this.cmbinformes.Items.AddRange(new object[] {
             "Informe Jueves Cpk Libranza"});
             this.cmbinformes.Location = new System.Drawing.Point(16, 129);
             this.cmbinformes.Name = "cmbinformes";
-            this.cmbinformes.Size = new System.Drawing.Size(228, 25);
+            this.cmbinformes.Size = new System.Drawing.Size(228, 26);
             this.cmbinformes.TabIndex = 88;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Roboto", 12F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(94)))), ((int)(((byte)(157)))));
-            this.label1.Location = new System.Drawing.Point(724, 93);
+            this.label1.Location = new System.Drawing.Point(668, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 32);
+            this.label1.Size = new System.Drawing.Size(51, 19);
             this.label1.TabIndex = 89;
             this.label1.Text = "Datos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -163,7 +163,7 @@
             this.Btn_Crear_plano.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             this.Btn_Crear_plano.IconColor = System.Drawing.Color.Gainsboro;
             this.Btn_Crear_plano.IconSize = 18;
-            this.Btn_Crear_plano.Location = new System.Drawing.Point(991, 618);
+            this.Btn_Crear_plano.Location = new System.Drawing.Point(930, 618);
             this.Btn_Crear_plano.Name = "Btn_Crear_plano";
             this.Btn_Crear_plano.Rotation = 0D;
             this.Btn_Crear_plano.Size = new System.Drawing.Size(111, 30);
@@ -179,7 +179,7 @@
             this.Btn_busqueda.BackColor = System.Drawing.Color.White;
             this.Btn_busqueda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_busqueda.Image = global::Usuarios_planta.Properties.Resources.search_26px;
-            this.Btn_busqueda.Location = new System.Drawing.Point(294, 195);
+            this.Btn_busqueda.Location = new System.Drawing.Point(272, 196);
             this.Btn_busqueda.Name = "Btn_busqueda";
             this.Btn_busqueda.Size = new System.Drawing.Size(24, 26);
             this.Btn_busqueda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -192,7 +192,7 @@
             this.pictureBox8.Image = global::Usuarios_planta.Properties.Resources.índice1;
             this.pictureBox8.Location = new System.Drawing.Point(6, 2);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(120, 77);
+            this.pictureBox8.Size = new System.Drawing.Size(101, 77);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 42;
             this.pictureBox8.TabStop = false;

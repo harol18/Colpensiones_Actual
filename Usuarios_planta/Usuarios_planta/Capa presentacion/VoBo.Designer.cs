@@ -82,7 +82,7 @@
             this.BtnAdmin.FlatAppearance.BorderSize = 0;
             this.BtnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAdmin.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnAdmin.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAdmin.Font = new System.Drawing.Font("Roboto", 9.75F);
             this.BtnAdmin.ForeColor = System.Drawing.Color.Gainsboro;
             this.BtnAdmin.IconChar = FontAwesome.Sharp.IconChar.UsersCog;
             this.BtnAdmin.IconColor = System.Drawing.Color.Gainsboro;
@@ -119,7 +119,7 @@
             this.Btnplanos_dia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(81)))));
             this.Btnplanos_dia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btnplanos_dia.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Btnplanos_dia.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btnplanos_dia.Font = new System.Drawing.Font("Roboto", 9.75F);
             this.Btnplanos_dia.ForeColor = System.Drawing.Color.LightGray;
             this.Btnplanos_dia.IconChar = FontAwesome.Sharp.IconChar.Bars;
             this.Btnplanos_dia.IconColor = System.Drawing.Color.Gainsboro;
@@ -146,7 +146,7 @@
             this.Btnplanos_ckl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(81)))));
             this.Btnplanos_ckl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btnplanos_ckl.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Btnplanos_ckl.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btnplanos_ckl.Font = new System.Drawing.Font("Roboto", 9.75F);
             this.Btnplanos_ckl.ForeColor = System.Drawing.Color.LightGray;
             this.Btnplanos_ckl.IconChar = FontAwesome.Sharp.IconChar.GripHorizontal;
             this.Btnplanos_ckl.IconColor = System.Drawing.Color.Gainsboro;
@@ -171,7 +171,7 @@
             this.BtnCrear_planos.FlatAppearance.BorderSize = 0;
             this.BtnCrear_planos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCrear_planos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnCrear_planos.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCrear_planos.Font = new System.Drawing.Font("Roboto", 9.75F);
             this.BtnCrear_planos.ForeColor = System.Drawing.Color.Gainsboro;
             this.BtnCrear_planos.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             this.BtnCrear_planos.IconColor = System.Drawing.Color.Gainsboro;
@@ -197,7 +197,7 @@
             this.BtnCargue_archivos.FlatAppearance.BorderSize = 0;
             this.BtnCargue_archivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCargue_archivos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnCargue_archivos.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCargue_archivos.Font = new System.Drawing.Font("Roboto", 9.75F);
             this.BtnCargue_archivos.ForeColor = System.Drawing.Color.Gainsboro;
             this.BtnCargue_archivos.IconChar = FontAwesome.Sharp.IconChar.Upload;
             this.BtnCargue_archivos.IconColor = System.Drawing.Color.Gainsboro;
@@ -235,7 +235,7 @@
             this.BtnInformes_dia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(81)))));
             this.BtnInformes_dia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnInformes_dia.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnInformes_dia.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnInformes_dia.Font = new System.Drawing.Font("Roboto", 9.75F);
             this.BtnInformes_dia.ForeColor = System.Drawing.Color.LightGray;
             this.BtnInformes_dia.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
             this.BtnInformes_dia.IconColor = System.Drawing.Color.Gainsboro;
@@ -261,7 +261,7 @@
             this.BtnInformes_ckl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(81)))));
             this.BtnInformes_ckl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnInformes_ckl.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnInformes_ckl.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnInformes_ckl.Font = new System.Drawing.Font("Roboto", 9.75F);
             this.BtnInformes_ckl.ForeColor = System.Drawing.Color.LightGray;
             this.BtnInformes_ckl.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
             this.BtnInformes_ckl.IconColor = System.Drawing.Color.Gainsboro;
@@ -285,7 +285,7 @@
             this.BtnInformes.FlatAppearance.BorderSize = 0;
             this.BtnInformes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnInformes.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnInformes.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnInformes.Font = new System.Drawing.Font("Roboto", 9.75F);
             this.BtnInformes.ForeColor = System.Drawing.Color.Gainsboro;
             this.BtnInformes.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
             this.BtnInformes.IconColor = System.Drawing.Color.Gainsboro;
@@ -349,7 +349,7 @@
             this.Btndia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(81)))));
             this.Btndia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btndia.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Btndia.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btndia.Font = new System.Drawing.Font("Roboto", 9.75F);
             this.Btndia.ForeColor = System.Drawing.Color.LightGray;
             this.Btndia.IconChar = FontAwesome.Sharp.IconChar.CalendarDay;
             this.Btndia.IconColor = System.Drawing.Color.Gainsboro;
@@ -376,7 +376,7 @@
             this.Btncklb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(81)))));
             this.Btncklb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btncklb.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Btncklb.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btncklb.Font = new System.Drawing.Font("Roboto", 9.75F);
             this.Btncklb.ForeColor = System.Drawing.Color.LightGray;
             this.Btncklb.IconChar = FontAwesome.Sharp.IconChar.ThList;
             this.Btncklb.IconColor = System.Drawing.Color.Gainsboro;
@@ -401,7 +401,7 @@
             this.BtnColpensiones.FlatAppearance.BorderSize = 0;
             this.BtnColpensiones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnColpensiones.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnColpensiones.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnColpensiones.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnColpensiones.ForeColor = System.Drawing.Color.Transparent;
             this.BtnColpensiones.IconChar = FontAwesome.Sharp.IconChar.Hiking;
             this.BtnColpensiones.IconColor = System.Drawing.Color.Gainsboro;
@@ -434,7 +434,7 @@
             this.pictureBox2.Image = global::Usuarios_planta.Properties.Resources.índice;
             this.pictureBox2.Location = new System.Drawing.Point(12, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(53, 34);
+            this.pictureBox2.Size = new System.Drawing.Size(134, 78);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;

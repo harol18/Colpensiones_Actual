@@ -17,6 +17,8 @@ namespace Usuarios_planta
     {
         MySqlConnection con = new MySqlConnection("server=;Uid=;password=;database=dblibranza;port=3306;persistsecurityinfo=True;");
 
+
+
         public void Accesso_Aplicacion()
         {
             con.Open();

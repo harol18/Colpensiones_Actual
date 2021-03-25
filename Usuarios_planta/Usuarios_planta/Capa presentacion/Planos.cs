@@ -215,5 +215,21 @@ namespace Usuarios_planta.Capa_presentacion
             dgv_datos_plano.Columns.Remove("Dictamen");
             dgv_datos_plano.Columns.Remove("Rechazo");
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+            if (cmb_Gestion2.Text == "Negados")
+            {
+                cmds.buscar_negadosckl(dtp_cargue, dgv_altas);
+                lbtotal.Text = dgv_altas.Rows.Count.ToString();
+            }
+            else if (cmb_Gestion2.Text == "Contabilizados")
+            {
+                cmds.contabilizados_altas(dtp_cargue, dgv_altas);
+                cmds.contabilizados_bajas(dtp_cargue, dgv_bajas);
+                lbtotal.Text = dgv_altas.Rows.Count.ToString();
+            }
+        }
     }
 }

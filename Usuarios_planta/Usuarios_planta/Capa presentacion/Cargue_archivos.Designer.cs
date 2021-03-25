@@ -61,7 +61,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -75,7 +75,7 @@
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Roboto", 9F);
             this.label3.Location = new System.Drawing.Point(35, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 53);
@@ -96,10 +96,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(83, 81);
+            this.label1.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(93, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.Size = new System.Drawing.Size(69, 18);
             this.label1.TabIndex = 2;
             this.label1.Text = "Fallecidos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -110,7 +110,7 @@
             this.BtnCargar_fallecidos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCargar_fallecidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCargar_fallecidos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnCargar_fallecidos.Font = new System.Drawing.Font("Roboto Bk", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCargar_fallecidos.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold);
             this.BtnCargar_fallecidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(101)))), ((int)(((byte)(124)))));
             this.BtnCargar_fallecidos.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnCargar_fallecidos.IconColor = System.Drawing.Color.Black;
@@ -136,18 +136,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Roboto Cn", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(94)))), ((int)(((byte)(157)))));
-            this.label2.Location = new System.Drawing.Point(304, 113);
+            this.label2.Location = new System.Drawing.Point(346, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(478, 43);
+            this.label2.Size = new System.Drawing.Size(403, 38);
             this.label2.TabIndex = 38;
             this.label2.Text = "Cargue Archivos Colpensiones";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.iconPictureBox1);
             this.panel3.Controls.Add(this.label4);
@@ -161,7 +161,7 @@
             // 
             // iconPictureBox1
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
             this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
@@ -174,7 +174,7 @@
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(35, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(182, 53);
@@ -185,10 +185,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(65, 81);
+            this.label5.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(83, 71);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 20);
+            this.label5.Size = new System.Drawing.Size(97, 18);
             this.label5.TabIndex = 2;
             this.label5.Text = "Base Recaudos";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -200,7 +200,7 @@
             this.BtnCargar_asignacion.Enabled = false;
             this.BtnCargar_asignacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCargar_asignacion.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnCargar_asignacion.Font = new System.Drawing.Font("Roboto Bk", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCargar_asignacion.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCargar_asignacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(101)))), ((int)(((byte)(124)))));
             this.BtnCargar_asignacion.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnCargar_asignacion.IconColor = System.Drawing.Color.Black;
@@ -211,7 +211,7 @@
             this.BtnCargar_asignacion.Size = new System.Drawing.Size(203, 34);
             this.BtnCargar_asignacion.TabIndex = 1;
             this.BtnCargar_asignacion.Text = "Cargar Archivo";
-            this.BtnCargar_asignacion.UseVisualStyleBackColor = false;            
+            this.BtnCargar_asignacion.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -224,7 +224,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.pictureBox4);
@@ -238,7 +238,7 @@
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Roboto", 9F);
             this.label6.Location = new System.Drawing.Point(35, 116);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(182, 53);
@@ -249,7 +249,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Usuarios_planta.Properties.Resources.paper_money_32px;
-            this.pictureBox4.Location = new System.Drawing.Point(98, 29);
+            this.pictureBox4.Location = new System.Drawing.Point(101, 29);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(56, 39);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -259,10 +259,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(69, 81);
+            this.label7.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(85, 75);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 20);
+            this.label7.Size = new System.Drawing.Size(96, 18);
             this.label7.TabIndex = 2;
             this.label7.Text = "Contabilizados";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -273,7 +273,7 @@
             this.BtnCargar_contabilizados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCargar_contabilizados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCargar_contabilizados.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnCargar_contabilizados.Font = new System.Drawing.Font("Roboto Bk", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCargar_contabilizados.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold);
             this.BtnCargar_contabilizados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(101)))), ((int)(((byte)(124)))));
             this.BtnCargar_contabilizados.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnCargar_contabilizados.IconColor = System.Drawing.Color.Black;
@@ -330,7 +330,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cargue_archivos";
-            this.Text = "Cargue_archivos";            
+            this.Text = "Cargue_archivos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
